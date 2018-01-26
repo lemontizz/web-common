@@ -1,5 +1,5 @@
-import store from '../../vuex/store';
-import router from '../../router/index';
+import store from '/src/vuex/store';
+import router from '/src/router/index';
 import storage from './storage';
 
 let request401 = function (data) {

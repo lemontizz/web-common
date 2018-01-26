@@ -1,5 +1,5 @@
 import storage from './storage.js';
-import store from '../../vuex/store';
+import store from '/src/vuex/store';
 
 let instanceIsShow = function(action, item) {
     let isShow = false,
