@@ -1,0 +1,133 @@
+<style lang="scss">
+    .page-loading {
+        float:left;
+        margin-top:10px;
+        margin-right:20px;
+        // background: rgba(0,0,0,0.5);
+        z-index: 99999999;
+        .grid {
+          overflow: hidden;
+        }
+        @-moz-keyframes spinner-loader {
+          0% {
+            -moz-transform: rotate(0deg);
+            transform: rotate(0deg);
+          }
+          100% {
+            -moz-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+        @-webkit-keyframes spinner-loader {
+          0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+          }
+          100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+        @keyframes spinner-loader {
+          0% {
+            -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+          }
+          100% {
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+        /* :not(:required) hides this rule from IE9 and below */
+        .spinner-loader:not(:required) {
+          -moz-animation: spinner-loader 1500ms infinite linear;
+          -webkit-animation: spinner-loader 1500ms infinite linear;
+          animation: spinner-loader 1500ms infinite linear;
+          -moz-border-radius: 0.5em;
+          -webkit-border-radius: 0.5em;
+          border-radius: 0.5em;
+          -moz-box-shadow: rgba(222, 222,222, 1) 1.2em 0 0 0, rgba(222, 222,222, 1) 0.8em 0.8em 0 0, rgba(222, 222,222, 1) 0 1.2em 0 0, rgba(222, 222,222, 1) -0.8em 0.9em 0 0, rgba(222, 222,222, 1) -1.2em 0 0 0, rgba(222, 222,222, 1) -0.8em -0.8em 0 0, rgba(222, 222,222, 1) 0 -1.2em 0 0, rgba(222, 222,222, 1) 0.8em -0.8em 0 0;
+          -webkit-box-shadow: rgba(222, 222,222, 1) 1.2em 0 0 0, rgba(222, 222,222, 1) 0.8em 0.8em 0 0, rgba(222, 222,222, 1) 0 1.2em 0 0, rgba(222, 222,222, 1) -0.8em 0.9em 0 0, rgba(222, 222,222, 1) -1.2em 0 0 0, rgba(222, 222,222, 1) -0.8em -0.8em 0 0, rgba(222, 222,222, 1) 0 -1.2em 0 0, rgba(222, 222,222, 1) 0.8em -0.8em 0 0;
+          box-shadow: rgba(222, 222,222, 1) 1.2em 0 0 0, rgba(222, 222,222, 1) 0.8em 0.8em 0 0, rgba(222, 222,222, 1) 0 1.2em 0 0, rgba(222, 222,222, 1) -0.8em 0.9em 0 0, rgba(222, 222,222, 1) -1.2em 0 0 0, rgba(222, 222,222, 1) -0.8em -0.8em 0 0, rgba(222, 222,222, 1) 0 -1.2em 0 0, rgba(222, 222,222, 1) 0.8em -0.8em 0 0;
+          display: inline-block;
+          font-size: 10px;
+          width: 0.5em;
+          height: 0.5em;
+          margin: 1.5em;
+          overflow: hidden;
+          text-indent: 100%;
+        }@-moz-keyframes spinner-loader {
+          0% {
+            -moz-transform: rotate(0deg);
+            transform: rotate(0deg);
+          }
+          100% {
+            -moz-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+        @-webkit-keyframes spinner-loader {
+          0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+          }
+          100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+        @keyframes spinner-loader {
+          0% {
+            -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+          }
+          100% {
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+        /* :not(:required) hides this rule from IE9 and below */
+        .spinner-loader:not(:required) {
+          -moz-animation: spinner-loader 1500ms infinite linear;
+          -webkit-animation: spinner-loader 1500ms infinite linear;
+          animation: spinner-loader 1500ms infinite linear;
+          -moz-border-radius: 0.5em;
+          -webkit-border-radius: 0.5em;
+          border-radius: 0.5em;
+        -moz-box-shadow: rgba(222, 222,222, 1) 1.2em 0 0 0, rgba(222, 222,222, 1) 0.8em 0.8em 0 0, rgba(222, 222,222, 1) 0 1.2em 0 0, rgba(222, 222,222, 1) -0.8em 0.9em 0 0, rgba(222, 222,222, 1) -1.2em 0 0 0, rgba(222, 222,222, 1) -0.8em -0.8em 0 0, rgba(222, 222,222, 1) 0 -1.2em 0 0, rgba(222, 222,222, 1) 0.8em -0.8em 0 0;
+          -webkit-box-shadow: rgba(222, 222,222, 1) 1.2em 0 0 0, rgba(222, 222,222, 1) 0.8em 0.8em 0 0, rgba(222, 222,222, 1) 0 1.2em 0 0, rgba(222, 222,222, 1) -0.8em 0.9em 0 0, rgba(222, 222,222, 1) -1.2em 0 0 0, rgba(222, 222,222, 1) -0.8em -0.8em 0 0, rgba(222, 222,222, 1) 0 -1.2em 0 0, rgba(222, 222,222, 1) 0.8em -0.8em 0 0;
+          box-shadow: rgba(222, 222,222, 1) 1.2em 0 0 0, rgba(222, 222,222, 1) 0.8em 0.8em 0 0, rgba(222, 222,222, 1) 0 1.2em 0 0, rgba(222, 222,222, 1) -0.8em 0.9em 0 0, rgba(222, 222,222, 1) -1.2em 0 0 0, rgba(222, 222,222, 1) -0.8em -0.8em 0 0, rgba(222, 222,222, 1) 0 -1.2em 0 0, rgba(222, 222,222, 1) 0.8em -0.8em 0 0;
+          display: inline-block;
+          font-size: 10px;
+          width: 0.5em;
+          height: 0.5em;
+          margin: 1.5em;
+          overflow: hidden;
+          text-indent: 100%;
+        }
+    }
+</style>
+
+<template>
+    <div class="page-loading" v-show="isShowLoading">
+        <span class="spinner-loader">Loading...</span>
+    </div>
+</template>
+
+<script>
+    export default {
+        computed: {
+            isShowLoading() {
+                return this.$store.state.common.showLoading;
+            }
+        },
+    }
+</script>
