@@ -1,0 +1,128 @@
+.page-modal {
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    .modal-dialog {
+        margin: 30px auto 0;
+    }
+    .modal-content {
+        position: relative;
+        background-color: #fff;
+        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+        background-clip: padding-box;
+        outline: 0;
+        background: #fff;
+        .modal-header {
+            height: 44px;
+            background: #434a52;
+            line-height: 44px;
+            padding: 15px;
+            border-bottom: 1px solid #e5e5e5;
+            box-sizing: border-box;
+            position: relative;
+            h4 {
+                font-weight: normal;
+                margin: 0;
+                padding: 0;
+                line-height: 14px;
+                color: #fff;
+                font-size: 14px;
+            }
+            a.close {
+                display: inline-block;
+                position: absolute;
+                right: 12px;
+                top: 12px;
+                width: 18px;
+                height: 18px;
+                background: url(./styles/images/close.png) no-repeat center;
+            }
+        }
+        .modal-body {
+            position: relative;
+            padding: 15px;
+        }
+        .modal-footer {
+            padding: 15px 10px;
+            text-align: right;
+            background: #f0f1f2;
+        }
+        .modal-footer .btn {
+            width: 104px;
+            height: 36px;
+            line-height: 36px;
+            font-size: 14px;
+        }
+        .modal-footer .btn + .btn {
+            margin-left: 5px;
+            margin-bottom: 0;
+        }
+    }
+    .modal-form {
+        .form-item {
+            padding: 10px 0;
+            font-size: 0;
+            margin: 0;
+            .label {
+                width: 120px;
+                text-align: right;
+                display: inline-block;
+                vertical-align: top;
+                font-size: 14px;
+                line-height: 38px;
+                height: 38px;
+                .required {
+                    color: #f1453d;
+                    display: inline-block;
+                    font-size: 14px;
+                    width: 10px;
+                    height: 38px;
+                    vertical-align: top;
+                    text-align: left;
+                    line-height: 40px;
+                }
+                .label-text {
+                    display: inline-block;
+                    vertical-align: top;
+                }
+            }
+            .textbox {
+                width: 340px;
+                height: 26px;
+                border: 1px solid #b8c4ce;
+                border-radius: 2px;
+                display: inline-block;
+                vertical-align: top;
+                outline: none;
+                padding: 5px 10px;
+                line-height: 26px;
+            }
+            .textarea {
+                width: 340px;
+                resize: none;
+                height: 56px;
+                border-radius: 2px;
+                display: inline-block;
+                vertical-align: top;
+                border: 1px solid #b8c4ce;
+                padding: 10px;
+            }
+            .textbox-readonly {
+                background: #eee;
+                border-radius: 2px;
+                height: 38px;
+                line-height: 38px;
+                padding: 0 10px;
+                width: 340px;
+                display: inline-block;
+                font-size: 14px;
+                vertical-align: top;
+            }
+        }
+    }
+}

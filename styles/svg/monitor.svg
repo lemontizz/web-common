@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>存储卷</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="LIST汇总" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sidebar-design" transform="translate(-96.000000, -476.000000)" fill="#ACB5C3">
+            <g id="Group-12" transform="translate(96.000000, 476.000000)">
+                <path d="M12.4444011,0 L1.55559886,0 C0.700038978,0 0,0.700038978 0,1.55559886 L0,12.4444011 C0,13.299961 0.700038978,14 1.55559886,14 L12.4444011,14 C13.299961,14 14,13.299961 14,12.4444011 L14,1.55559886 C14,0.700038978 13.299961,0 12.4444011,0 L12.4444011,0 Z M3.11119773,5.44440114 L4.66679659,5.44440114 L4.66679659,10.8888023 L3.11119773,10.8888023 L3.11119773,5.44440114 Z M6.22200568,3.11119773 L7.77760454,3.11119773 L7.77760454,10.8888023 L6.22200568,10.8888023 L6.22200568,3.11119773 Z M9.33320341,7.77799432 L10.8888023,7.77799432 L10.8888023,10.889192 L9.33320341,10.889192 L9.33320341,7.77799432 Z" id="监控告警"></path>
+            </g>
+        </g>
+    </g>
+</svg>

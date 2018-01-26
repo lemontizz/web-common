@@ -1,0 +1,177 @@
+.btn{
+    height:32px;
+    margin-left:15px;
+    font-size: 12px;
+    line-height: 30px;
+    color:#797b7b;
+    background: #fff;
+    outline: none;
+    border:1px solid #fff;
+    cursor:pointer;
+    border-radius: 2px;
+    padding: 0 15px;
+    transition: background 1s;
+    &:hover {
+        background: #fff;
+    }
+    span{
+        display:inline-block;
+        width:16px;
+        height:16px;
+        background: url(./styles/images/baseicons.png) no-repeat -42px 0;
+        vertical-align: middle;
+    }
+    i{
+        font-size:14px;
+        color:#fff;
+        line-height:30px;
+        margin-right:5px;
+    }
+}
+.btn-active{
+    background: #27a9f8;
+    color:#fff;
+    border: 1px solid #27a9f8;
+    &:hover {
+        background: #74d4fa;
+        border: 1px solid #74d4fa;
+    }
+    span{
+        background-position-y:0px;
+    }
+}
+.btn:first-child{
+    margin-left: 0;
+}
+.btn-change span{
+    background-position-y:-266px;
+}
+.btn-active.btn-change span{
+    background-position-y:-288px;
+}
+.btn-delete span{
+    background-position-y:-333px;
+}
+.btn-active.btn-delete span{
+    background-position-y:-310px;
+}
+.btn-reset span{
+    background-position-y:-422px;
+}
+.btn-active.btn-reset span{
+    background-position-y:-142px;
+}
+.btn-export span{
+    background-position-y:-378px;
+}
+.btn-active.btn-export span{
+    background-position-y:-356px;
+}
+.btn-start span {
+    background-position-y: -110px;
+}
+.btn-start.btn-active span {
+    background-position-y: -88px;
+}
+.btn-noallow span {
+    background-position-y: -244px;
+}
+.btn-noallow.btn-active span {
+    background-position-y: -222px;
+}
+.btn-stop span {
+    background-position-y: -154px;
+}
+.btn-stop.btn-active span {
+    background-position-y: -132px;
+}
+.btn-restart span {
+    background-position-y: -199px;
+}
+.btn-restart.btn-active span {
+    background-position-y: -176px;
+}
+.btn-edit span {
+    background-position-y: -288px;
+}
+.btn-edit.btn-active span {
+    background-position-y: -266px;
+}
+.btn-restore span {
+    background-position-y: -422px;
+}
+.btn-restore.btn-active span {
+    background-position-y: -400px;
+}
+.btn-clear span {
+    background-position: -64px -22px;
+}
+.btn-clear.btn-active span {
+    background-position: -64px 0;
+}
+.btn-upgrade span {
+    background-position: -64px -110px;
+}
+.btn-upgrade.btn-active span {
+    background-position: -64px -88px;
+}
+.btn-allow span {
+    background-position: -64px -198px;
+}
+.btn-allow.btn-active span {
+    background-position: -64px -176px;
+}
+.btn-bind span {
+    background-position: -64px -242px;
+}
+.btn-bind.btn-active span {
+    background-position: -64px -220px;
+}
+.btn-refresh span {
+    background-position-y: -199px;
+}
+.btn-refresh.btn-active span {
+    background-position-y: -176px;
+}
+.btn-fault span {
+    background-position: -64px -66px;
+}
+.btn-fault.btn-active span {
+    background-position: -64px -44px;
+}
+.btn-image span {
+    background: url(./styles/images/baseicons_1.png) no-repeat;
+    background-position: -64px -370px;
+}
+.btn-image.btn-active span {
+    background: url(./styles/images/baseicons_1.png) no-repeat;
+    background-position: -64px -350px;
+}
+.disabled{
+    opacity: .4;   
+    cursor:not-allowed;
+    pointer-events: none;
+    background: #F4F4F4;
+}
+.btn-active.disabled {
+    color: #555;
+    border: 1px solid #E0E7EB;   
+}
+.btn-domain{
+    margin-top:30px;
+    padding-top:20px;
+    border-top:1px solid #f0f2f4;
+    text-align:right;
+}
+.btn-big{
+    width:120px;
+    height:36px;
+}
+.btn-query{
+    background:#e0e4ea;
+    color:#667c99;
+}
+.btn-console span{
+    background:url(./styles/images/baseicons.png) no-repeat -18px -70px;
+    margin-top:2px;
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>存储卷</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="LIST汇总" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sidebar-design" transform="translate(-63.000000, -520.000000)" fill="#ACB5C3">
+            <g id="Group-5" transform="translate(63.000000, 520.000000)">
+                <g id="存储卷" transform="translate(1.000000, 0.000000)">
+                    <path d="M6,11 C2.68625,11 0,10.0485 0,8.875 L0,12 L0.01125,12 C0.194,13.1155 2.80475,14 6,14 C9.195,14 11.806,13.1155 11.98875,12 L12,12 L12,8.875 C12,10.0485 9.31375,11 6,11" id="Fill-964"></path>
+                    <path d="M6,7.5 C2.68625,7.5 0,6.5485 0,5.375 L0,8.5 L0.01125,8.5 C0.194,9.6155 2.80475,10.5 6,10.5 C9.195,10.5 11.806,9.6155 11.98875,8.5 L12,8.5 L12,5.375 C12,6.5485 9.31375,7.5 6,7.5" id="Fill-967"></path>
+                    <path d="M12,2.125 C12,3.2985 9.31375,4.25 6,4.25 C2.68625,4.25 0,3.2985 0,2.125 C0,0.9515 2.68625,0 6,0 C9.31375,0 12,0.9515 12,2.125" id="Fill-970"></path>
+                    <path d="M6,4 C2.68625,4 0,3.0485 0,1.875 L0,5 L0.01125,5 C0.194,6.1155 2.80475,7 6,7 C9.195,7 11.806,6.1155 11.98875,5 L12,5 L12,1.875 C12,3.0485 9.31375,4 6,4" id="Fill-971"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

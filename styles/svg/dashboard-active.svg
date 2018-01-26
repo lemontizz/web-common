@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>控制台</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="LIST汇总" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-240.000000, -360.000000)" fill="#FFFFFF">
+            <g id="Group" transform="translate(240.000000, 360.000000)">
+                <path d="M6.999825,6.23 C6.57316433,6.23 6.22980575,6.573 6.22980575,7 C6.22980575,7.427 6.57316433,7.77 6.999825,7.77 C7.42683567,7.77 7.76984425,7.427 7.76984425,7 C7.76984425,6.573 7.42683567,6.23 6.999825,6.23 L6.999825,6.23 Z M6.999825,0 C3.13572839,0 0,3.136 0,7 C0,10.864 3.13572839,14 6.999825,14 C10.8639216,14 14,10.864 14,7 C14,3.136 10.8639216,0 6.999825,0 L6.999825,0 Z M8.53286332,8.533 L2.79971999,11.2 L5.46678667,5.467 L11.19993,2.8 L8.53286332,8.533 L8.53286332,8.533 Z" id="控制台"></path>
+            </g>
+        </g>
+    </g>
+</svg>

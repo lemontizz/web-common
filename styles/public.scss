@@ -1,0 +1,150 @@
+html{
+    font-size:100px;
+}
+body{
+    font-size:12px;
+    height:100%;
+    overflow:hidden;
+    font-family: "PingFangSC","Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+h1,h2,h3,h4,h5,h6,i,b,strong,em{
+    font-weight:normal;
+    font-style:normal;
+}
+li{
+    list-style: none;
+}
+button{
+    outline: none;
+}
+input,textarea{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+input[type="checkbox"] {
+    vertical-align: middle;
+}
+.float-l{
+    float: left;
+}
+.float-r{
+    float: right;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+.clearfix {
+    zoom: 1;
+}
+.show {
+    display: block !important;
+}
+.hide {
+    display: none !important;
+}
+.arrow{
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: serif;
+    margin-left: 2px;
+    font-weight: bold;
+    transform: rotate(-90deg);
+    color: #45c6f8;
+    transition: all .4s;
+}
+.arrow-top{
+    transform: rotate(-270deg);
+}
+.text-center {
+    text-align: center!important;
+}
+.text-right {
+    text-align: right!important;
+}
+.text-left {
+    text-align: left !important;
+}
+.p-10 {
+    padding: 10px;
+}
+.p-0 {
+    padding: 0;
+}
+.m-l-10 {
+    margin-left: 10px;
+}
+.m-l-15 {
+    margin-left: 15px;
+}
+.m-t-10 {
+    margin-top: 10px;
+}
+.m-r-10 {
+    margin-right: 10px;
+}
+.common-select{
+    height:32px;
+    box-sizing:border-box;
+    input{
+        height:32px;
+        border-radius: 2px;
+    }
+}
+.text-link {
+    color: #3e3e3e;
+    font-weight:normal;
+    font-size:13px;
+    font-family: PingFangSC;
+    text-decoration: none;
+    outline:none !important;
+    &:hover {
+        color:#45c6f8;
+    }
+}
+.el-dropdown-menu__item {
+    line-height: 30px;
+}
+.el-dropdown-menu__item a, .el-dropdown-menu__item span {
+    display: inline-block;
+    width: 100%;
+}
+.system.system0,.system.system1,.system.system2,.system.system3,.system.system4,.system.system5,.system.system6,.system.system7,.system.system8,.system.system9 {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url(./styles/images/baseicons.png) no-repeat -86px 0;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.system.system0 {
+    background-position: -86px 0;
+}
+.system.system1 {
+    background-position: -86px -24px;
+}
+.system.system2 {
+    background-position: -86px -50px;
+}
+.system.system3 {
+    background-position: -86px -76px;
+}
+.system.system4 {
+    background-position: -86px -102px;
+}
+.system.system5 {
+    background-position: -86px -125px;
+}
+.system.system6 {
+    background-position: -86px -146px;
+}
+.system.system7 {
+    background-position: -86px -172px;
+}
