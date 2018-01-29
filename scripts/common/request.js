@@ -1,6 +1,7 @@
 import store from '@/vuex/store';
 import router from '@/router/index';
 import storage from './storage';
+import webCommonConfig from 'config&/web-common-config';
 
 let request401 = function (data) {
     store.dispatch('SHOW_ALERT', {
@@ -11,7 +12,11 @@ let request401 = function (data) {
             onConfirm () {
                 store.dispatch('HIDE_ALERT');
                 store.dispatch('CLEAR_TOKEN');
-                delete window.localStorage.EVM_TOKEN;
+                if(webCommonConfig && webCommonConfig.project === 'EVM') {
+                    delete window.localStorage.EVM_TOKEN;
+                } else {
+                    delete window.localStorage.XVIEW_TOKEN;
+                }
                 store.dispatch('CLEAR_MONITOR_AUTH');
                 router.push('/login')
                 return;
