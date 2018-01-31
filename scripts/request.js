@@ -1,6 +1,6 @@
 import store from '@/vuex/store';
 import router from '@/router/index';
-import storage from '@/storage';
+import storage from '@/scripts/storage';
 import webCommonConfig from 'config&/web-common-config';
 
 let request401 = function (data) {
