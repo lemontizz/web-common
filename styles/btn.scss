@@ -140,18 +140,16 @@
     background-position: -64px -44px;
 }
 .btn-image span {
-    background: url(./styles/images/baseicons_1.png) no-repeat;
     background-position: -64px -370px;
 }
 .btn-image.btn-active span {
-    background: url(./styles/images/baseicons_1.png) no-repeat;
     background-position: -64px -350px;
 }
 .disabled{
     opacity: .4;   
     cursor:not-allowed;
     pointer-events: none;
-    background: #F4F4F4;
+    background: #F4F4F4 !important;
 }
 .btn-active.disabled {
     color: #555;

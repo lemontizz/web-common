@@ -6,8 +6,6 @@ import webCommonConfig from 'config&/web-common-config';
 let request401 = function (data) {
     store.dispatch('SHOW_ALERT', {
         message: '会话已过期，请重新登录',
-        origin: 'error',
-        errorInfo: JSON.stringify(data),
         callbacks: {
             onConfirm () {
                 store.dispatch('HIDE_ALERT');

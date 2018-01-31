@@ -60,6 +60,7 @@ let trans = {
 }
 
 let getMessage = function(data) {
+    if(!data.data.event_type) return;
 
     let transItem = trans[data.data.event_type];
 
@@ -72,7 +73,7 @@ let getMessage = function(data) {
 };
 
 let isCreateInstanceFinished = function(data) {
-    return (data.event_type === 'compute.instance.create.end' || data.event_type === 'compute.instance.create.error');
+    return data.event_type && (data.event_type === 'compute.instance.create.end' || data.event_type === 'compute.instance.create.error');
 }
 
 let isInstanceOperation = function(data) {
@@ -92,7 +93,11 @@ let isSnapshotOperation = function(data) {
 }
 
 let isFinished = function(data) {
-    return (data.event_type.endsWith('.end') || data.event_type.endsWith('.error')) || data.event_type == 'image.activate';
+    return data.event_type && (data.event_type.endsWith('.end') || data.event_type.endsWith('.error')) || data.event_type == 'image.activate';
+}
+
+let isFlavorChange = function(data) {
+    return (['compute.instance.resize.prep.end', 'compute.instance.resize.confirm.end'].includes(data.event_type));
 }
 
 let isInstanceDelFinished = function(data) {
@@ -123,11 +128,15 @@ let isRepeatMsg = function(oldMsg, newMsg) {
 }
 
 let isResizeFinished = function(data) {
-    return data.payload.old_state === "resized" && data.payload.state === 'stopped';
+    return data.payload && data.payload.old_state && data.payload.old_state === "resized" && data.payload.state === 'stopped';
 }
 
 let isFloatingIpBindFinished = function(data) {
     return data.event_type && data.event_type === 'floatingip.update.end';
+}
+
+let isInstanceUserOperation = function(data) {
+    returndata.event_type && data.event_type === 'instance.state.user';
 }
 
 export default {
@@ -136,10 +145,12 @@ export default {
     isInstanceOperation,
     isFinished,
     isVolumeOperation,
+    isFlavorChange,
     isSnapshotOperation,
     isRepeatMsg,
     isInstanceDelFinished,
     isResizeFinished,
     isFloatingIpBindFinished,
+    isInstanceUserOperation,
     isInstanceDettachVolume
 }

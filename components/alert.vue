@@ -132,7 +132,7 @@
             },
             hideAlert: function () {
                 this.$store.dispatch('HIDE_ALERT');
-            },
+            }
         }
     };
 </script>

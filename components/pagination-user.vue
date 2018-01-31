@@ -82,7 +82,7 @@
         },
         watch: {
             searchParams() {
-                console.log('xxxxx');
+                // console.log('xxxxx');
             }
         },
         methods: {
@@ -152,7 +152,7 @@
 
                     this.pageMaker[this.currentIndex] = marker;
                 } catch(e) {
-                    console.warn('set marker failed')
+                    // console.warn('set marker failed')
                 }
             }
         },

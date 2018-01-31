@@ -10,8 +10,6 @@
     	width:100%;
     	border-collapse:collapse;
         table-layout: fixed;
-        /*border: solid 1px #e1e5ec;*/
-        table-layout: fixed;
         .serverMessCheck{
             text-align:center !important;
         }
@@ -164,9 +162,7 @@
     		tr.active{
     			background-color: #e2ecfa;
     		}
-            tr.active td:first-child {
-                /*background-color: #e2ecfa;*/
-                /*background-image: url(./styles/images/active_border_point.jpg);
+            	tr.active td:first-child {
                 background-repeat: no-repeat;
                 background-position: left center;
                 background-size: 5px 50px;*/
@@ -251,19 +247,6 @@
     }
     .operation {
         .text-link {
-            /*height: 30px;
-            line-height:60px;
-            padding: 0 12px;
-            line-height: 30px;
-            vertical-align: bottom;
-            background: #e9edef;
-            display: inline-block;
-            border-radius: 2px;
-            text-decoration: none;
-            color: #94a0b2;
-            margin: 0 4px 4px 0;
-            color:#5d6d7e;
-            transition: background 0.3s;*/
             display: inline-block;
             text-decoration: none;
             color:#5d6d7e;
@@ -271,7 +254,6 @@
             margin-left:5px;
         }
         .text-link:hover {
-            /*background: #e4e7e9;*/
             text-decoration:underline;
         }
         .text-link:nth-child(1){
@@ -402,7 +384,7 @@
         font-size: 14px;
         color: #5d6d7e;
     }
-    .el-select{/* 下拉框 */
+    .el-select,.el-cascader{/* 下拉框 */
         width: 580px;
         .el-input__inner{
             border-radius: 2px;
@@ -468,6 +450,7 @@
         font-size: 12px;
     }
 }
+
 /* 新建页面右侧说明 */
 .create-top{
     display:flex;
@@ -489,7 +472,7 @@
         &>input[type="text"],&>input[type="password"],&>input[type="number"],&>textarea{
             width:450px;
         }
-        .el-select{
+        .el-select,.el-cascader{
             width:462px;
         }
         .high{
@@ -575,6 +558,7 @@
         background-color: #45c6f8;
     }
 }
+
 .checkbox-item.clickfalse {
     cursor: default;
 }
@@ -583,6 +567,7 @@
     border-color: #45c6f8;
     background: #45c6f8;
 }
+
 /* 问号说明 */
 .explain-icon{
     width: 18px;

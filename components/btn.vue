@@ -19,7 +19,7 @@
                 this.$emit('click');
             },
             hoverBtn() {
-                console.log('hover');
+                // console.log('hover');
             },
         }
     }

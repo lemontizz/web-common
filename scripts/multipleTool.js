@@ -1,5 +1,7 @@
 let getInstanceStatus = function(status) {
     switch(status) {
+        case 'INSERVICE' :
+            return '已连接';
         case 'ACTIVE' :
             return '运行中';
         case 'BUILDING' :
@@ -34,10 +36,14 @@ let getInstanceStatus = function(status) {
             return '确认扩容'
         case 'RESIZE':
             return '扩容中'
+        case 'LIVELY':
+            return '活跃';
+        case 'FREE':
+            return '闲置';
         default:
             return status;
     }
-};
+}
 
 let getFontColor = function(status){
     switch(status){
@@ -60,6 +66,55 @@ let getFontColor = function(status){
     }
 }
 
+let getAvartarColor = function(index) {
+    let status = (index+6)%7;
+    switch(status){
+        case 1:
+            return 'rgb(222,238,251)'
+            break;
+        case 2:
+            return 'rgba(141,222,204,0.3)'
+            break;
+        case 3:
+            return 'rgb(254,249,231)'
+            break;
+        case 4:
+            return 'rgb(253,238,233)'
+            break;
+        case 5:
+            return 'rgb(231,246,231)'
+            break;
+        case 6:
+            return 'rgb(249,236,252)'
+            break;
+        default:
+            break;
+    }
+}
+
+let getAvartarFontColor = function(index) {
+    let status = (index+6)%7;
+    switch(status){
+        case 1:
+            return '#1c8fed'
+            break;
+        case 2:
+            return '#16a085'
+            break;
+        case 3:
+            return '#d7a200'
+            break;
+        case 4:
+            return '#e86534'
+            break;
+        case 5:
+            return '#599139'
+            break;
+        case 6:
+            return '#aa4db7'
+            break;
+    }
+}
 let getAvartar = function(item) {
     let reg = new RegExp("[\\u4E00-\\u9FFF]+","g");
     if(reg.test(item.substr(0,1))) {
@@ -184,6 +239,8 @@ export default {
     getStorageBackStatus,
     getInstanceStatus,
     getFontColor,
+    getAvartarColor,
+    getAvartarFontColor,
     getAvartar,
     getInstanceOperationCN,
 }

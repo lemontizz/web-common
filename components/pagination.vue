@@ -157,7 +157,6 @@
         },
         watch: {
             list() {
-                console.log('-----list change------')
                 this.build();
                 this.rebuild(this.current);
             },

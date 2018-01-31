@@ -29,8 +29,6 @@
         width: 200px;
         box-shadow:none;
         text-indent: 14px;
-        // background: url(./styles/images/evm_logo.png) no-repeat 19px center;
-        // background-size: 150px 55px;
         font-family: Krungthep;
         background-color: #62a8ea;
         box-shadow: -4px 0 5px 0 #111519;
@@ -595,8 +593,16 @@
                     background:url(./styles/svg/host.svg) no-repeat center center;
                     background-size: cover;
                 }
+		.cloud-icon{
+                    background:url(./styles/svg/cloud.svg) no-repeat center;
+                    background-size:cover;
+                }
+		.pool-icon{
+                    background:url(./styles/svg/cloudPool.svg) no-repeat center;
+                    background-size:cover;                    
+                }
                 
-                .cloud-icon{
+                .instance-icon{
                     background:url(./styles/svg/instance.svg) no-repeat center;
                     background-size:cover;
                 }
@@ -607,6 +613,10 @@
                 
                 .rececle-icon{
                     background:url(./styles/svg/sidebar-menu-project-normal.svg) no-repeat center
+                }
+		.device-icon{
+                    background:url(./styles/svg/device.svg) no-repeat center ;
+                    background-size:cover;
                 }
                 
                 .user-icon{
@@ -628,11 +638,20 @@
                     background:url(./styles/svg/topology.svg) no-repeat center;
                     background-size:cover;
                 }
+		.policy-icon{
+                    background:url(./styles/svg/template.svg) no-repeat center ;
+                    background-size:cover;
+                }
+                .manage-icon{
+                    background:url(./styles/svg/manage.svg) no-repeat center ;
+                    background-size:cover;
+                }
                 .log-icon{
                     background:url(./styles/svg/sidebar-menu-audit-log-normal.svg) no-repeat center; 
                 }
+		
                 
-                .device-icon{
+                .volume-icon{
                     background:url(./styles/svg/volume.svg) no-repeat center;
                 }
                 
@@ -652,11 +671,18 @@
                     background:url(./styles/svg/container.svg) no-repeat center; 
                     background-size:cover;
                 }
+		.attestation-icon{
+                    background:url(./styles/svg/attestation.svg) no-repeat center ;
+                    background-size:cover;
+                }
                 .authority-icon{
                     background:url(./styles/svg/authority.svg) no-repeat center; 
                     background-size:cover;
                 }
-                
+                .defend-icon{
+                    background:url(./styles/svg/defend.svg) no-repeat center ;
+                    background-size:cover;
+                }
                 i{
                     color:#bac1ca;
                     white-space: nowrap;
@@ -682,7 +708,11 @@
                 background:url(./styles/svg/host-active.svg) no-repeat center center;
                 background-size: cover;               
             }
-            .cloud-icon{
+	    .cloud-icon{
+                background:url(./styles/svg/cloud-active.svg) no-repeat center ;
+                background-size:cover;
+            }
+            .instance-icon{
                 background:url(./styles/svg/instance-active.svg) no-repeat center ;
                 background-size:cover;               
             }
@@ -691,6 +721,10 @@
             }
             .rececle-icon{
                 background:url(./styles/svg/project-active.svg) no-repeat center
+            }
+	    .device-icon{
+                background:url(./styles/svg/device-active.svg) no-repeat center ;
+                background-size:cover;
             }
             .user-icon{
                 background:url(./styles/svg/user-active.svg) no-repeat center;
@@ -709,10 +743,14 @@
                 background:url(./styles/svg/topology-active.svg) no-repeat center;
                 background-size:cover;
             }
+	    .manage-icon{
+                background:url(./styles/svg/manage-active.svg) no-repeat center ;
+                background-size:cover;
+            }
             .log-icon{
                 background:url(./styles/svg/audit-log-active.svg) no-repeat center;
             }
-            .device-icon{
+            .volume-icon{
                 background:url(./styles/svg/volume-active.svg) no-repeat center;
             }
             .system-icon{
@@ -733,7 +771,26 @@
                 background:url(./styles/svg/authority-active.svg) no-repeat center; 
                 background-size:cover;
             }
+	    .attestation-icon{
+                background:url(./styles/svg/attestation-active.svg) no-repeat center ;
+                background-size:cover;
+            }
+            .defend-icon{
+                background:url(./styles/svg/defend-active.svg) no-repeat center ;
+                background-size:cover;
+            }
+            .policy-icon{
+                background:url(./styles/svg/template-active.svg) no-repeat center ;
+                background-size:cover;
+            }
         }
+        .lowe-lever-icon{
+            float:right;
+            margin-top:20px;
+            margin-right:15px;
+            margin-left:0;
+        }
+
     }
 }
 .page-menu.extend{
