@@ -10,11 +10,7 @@ let request401 = function (data) {
             onConfirm () {
                 store.dispatch('HIDE_ALERT');
                 store.dispatch('CLEAR_TOKEN');
-                if(webCommonConfig && webCommonConfig.project === 'EVM') {
-                    delete window.localStorage.EVM_TOKEN;
-                } else {
-                    delete window.localStorage.XVIEW_TOKEN;
-                }
+                storage.clear();
                 store.dispatch('CLEAR_MONITOR_AUTH');
                 router.push('/login')
                 return;
