@@ -585,102 +585,101 @@
                     z-index: 1;
                 }
                 .home-icon{
-                    background:url(./styles/svg/sidebar-menu-dashboard-normal.svg) no-repeat center center;
+                    background:url(./styles/svg/menu-dashboard.svg) no-repeat center center;
                                       
                 }
-                
                 .host-icon{
-                    background:url(./styles/svg/host.svg) no-repeat center center;
+                    background:url(./styles/svg/menu-host.svg) no-repeat center center;
                     background-size: cover;
                 }
-		.cloud-icon{
-                    background:url(./styles/svg/cloud.svg) no-repeat center;
+		        .cloud-icon{
+                    background:url(./styles/svg/menu-cloud.svg) no-repeat center;
                     background-size:cover;
                 }
-		.pool-icon{
-                    background:url(./styles/svg/cloudPool.svg) no-repeat center;
+		        .pool-icon{
+                    background:url(./styles/svg/menu-cloudPool.svg) no-repeat center;
                     background-size:cover;                    
                 }
                 
                 .instance-icon{
-                    background:url(./styles/svg/instance.svg) no-repeat center;
+                    background:url(./styles/svg/menu-instance.svg) no-repeat center;
                     background-size:cover;
                 }
 
                 .group-icon{
-                    background:url(./styles/svg/group.svg) no-repeat center;
+                    background:url(./styles/svg/menu-group.svg) no-repeat center;
                 }
                 
                 .rececle-icon{
-                    background:url(./styles/svg/sidebar-menu-project-normal.svg) no-repeat center
+                    background:url(./styles/svg/menu-project.svg) no-repeat center
                 }
-		.device-icon{
-                    background:url(./styles/svg/device.svg) no-repeat center ;
+		        .device-icon{
+                    background:url(./styles/svg/menu-device.svg) no-repeat center ;
                     background-size:cover;
                 }
                 
                 .user-icon{
-                    background:url(./styles/svg/sidebar-menu-user-normal.svg) no-repeat center; 
+                    background:url(./styles/svg/menu-user.svg) no-repeat center; 
                 }
                 
                 .warn-icon{
-                    background:url(./styles/svg/monitor.svg) no-repeat center;
+                    background:url(./styles/svg/menu-monitor.svg) no-repeat center;
                 }
                 
                 .net-icon{
-                    background:url(./styles/svg/network.svg) no-repeat center;
+                    background:url(./styles/svg/menu-network.svg) no-repeat center;
                 }
                 .float-icon{
-                    background:url(./styles/svg/floatIp.svg) no-repeat center;
+                    background:url(./styles/svg/menu-floatIp.svg) no-repeat center;
                     background-size:cover;
                 }
                 .topo-icon{
-                    background:url(./styles/svg/topology.svg) no-repeat center;
+                    background:url(./styles/svg/menu-topology.svg) no-repeat center;
                     background-size:cover;
                 }
-		.policy-icon{
-                    background:url(./styles/svg/template.svg) no-repeat center ;
+		        .policy-icon{
+                    background:url(./styles/svg/menu-template.svg) no-repeat center ;
                     background-size:cover;
                 }
                 .manage-icon{
-                    background:url(./styles/svg/manage.svg) no-repeat center ;
+                    background:url(./styles/svg/menu-manage.svg) no-repeat center ;
                     background-size:cover;
                 }
                 .log-icon{
-                    background:url(./styles/svg/sidebar-menu-audit-log-normal.svg) no-repeat center; 
+                    background:url(./styles/svg/menu-log.svg) no-repeat center; 
                 }
 		
                 
                 .volume-icon{
-                    background:url(./styles/svg/volume.svg) no-repeat center;
+                    background:url(./styles/svg/menu-volume.svg) no-repeat center;
                 }
                 
                 .system-icon{
-                    background:url(./styles/svg/sidebar-menu-setting-normal.svg) no-repeat center; 
+                    background:url(./styles/svg/menu-system.svg) no-repeat center; 
                 }
                 
                 .template-icon{
-                    background:url(./styles/svg/template.svg) no-repeat center;
+                    background:url(./styles/svg/menu-template.svg) no-repeat center;
                     background-size: cover; 
                 }
                 
                 .image-icon{
-                    background:url(./styles/svg/image.svg) no-repeat center; 
+                    background:url(./styles/svg/menu-image.svg) no-repeat center; 
                 }
                 .component-icon{
-                    background:url(./styles/svg/container.svg) no-repeat center; 
+                    background:url(./styles/svg/menu-component.svg) no-repeat center; 
                     background-size:cover;
                 }
-		.attestation-icon{
-                    background:url(./styles/svg/attestation.svg) no-repeat center ;
+		        .attestation-icon{
+                    background:url(./styles/svg/menu-attestation.svg) no-repeat center ;
                     background-size:cover;
                 }
                 .authority-icon{
-                    background:url(./styles/svg/authority.svg) no-repeat center; 
+                    background:url(./styles/svg/menu-authority.svg) no-repeat center; 
                     background-size:cover;
                 }
                 .defend-icon{
-                    background:url(./styles/svg/defend.svg) no-repeat center ;
+                    background:url(./styles/svg/menu-defend.svg) no-repeat center ;
                     background-size:cover;
                 }
                 i{
@@ -702,85 +701,85 @@
                 color:#fff !important;
             }
             .home-icon{
-                background:url(./styles/svg/dashboard-active.svg) no-repeat center center;
+                background:url(./styles/svg/menu-dashboard-active.svg) no-repeat center center;
             }
             .host-icon{
-                background:url(./styles/svg/host-active.svg) no-repeat center center;
+                background:url(./styles/svg/menu-host-active.svg) no-repeat center center;
                 background-size: cover;               
             }
-	    .cloud-icon{
-                background:url(./styles/svg/cloud-active.svg) no-repeat center ;
+	       .cloud-icon{
+                background:url(./styles/svg/menu-cloud-active.svg) no-repeat center ;
                 background-size:cover;
             }
             .instance-icon{
-                background:url(./styles/svg/instance-active.svg) no-repeat center ;
+                background:url(./styles/svg/menu-instance-active.svg) no-repeat center ;
                 background-size:cover;               
             }
             .group-icon{
-                background:url(./styles/svg/group-active.svg) no-repeat center;
+                background:url(./styles/svg/menu-group-active.svg) no-repeat center;
             }
             .rececle-icon{
-                background:url(./styles/svg/project-active.svg) no-repeat center
+                background:url(./styles/svg/menu-project-active.svg) no-repeat center
             }
-	    .device-icon{
-                background:url(./styles/svg/device-active.svg) no-repeat center ;
+	       .device-icon{
+                background:url(./styles/svg/menu-device-active.svg) no-repeat center ;
                 background-size:cover;
             }
             .user-icon{
-                background:url(./styles/svg/user-active.svg) no-repeat center;
+                background:url(./styles/svg/menu-user-active.svg) no-repeat center;
             }
             .warn-icon{
-                background:url(./styles/svg/monitor-active.svg) no-repeat center;
+                background:url(./styles/svg/menu-monitor-active.svg) no-repeat center;
             }
             .net-icon{
-                background:url(./styles/svg/network-active.svg) no-repeat center;
+                background:url(./styles/svg/menu-network-active.svg) no-repeat center;
             }
             .float-icon{
-                background:url(./styles/svg/floatIp-active.svg) no-repeat center;
+                background:url(./styles/svg/menu-floatIp-active.svg) no-repeat center;
                 background-size:cover;                
             }
             .topo-icon{
-                background:url(./styles/svg/topology-active.svg) no-repeat center;
+                background:url(./styles/svg/menu-topology-active.svg) no-repeat center;
                 background-size:cover;
             }
-	    .manage-icon{
-                background:url(./styles/svg/manage-active.svg) no-repeat center ;
+	       .manage-icon{
+                background:url(./styles/svg/menu-manage-active.svg) no-repeat center ;
                 background-size:cover;
             }
             .log-icon{
-                background:url(./styles/svg/audit-log-active.svg) no-repeat center;
+                background:url(./styles/svg/menu-log-active.svg) no-repeat center;
             }
             .volume-icon{
-                background:url(./styles/svg/volume-active.svg) no-repeat center;
+                background:url(./styles/svg/menu-volume-active.svg) no-repeat center;
             }
             .system-icon{
-                background:url(./styles/svg/settings-active.svg) no-repeat center;
+                background:url(./styles/svg/menu-system-active.svg) no-repeat center;
             }
             .template-icon{
-                background:url(./styles/svg/template-active.svg) no-repeat center;
+                background:url(./styles/svg/menu-template-active.svg) no-repeat center;
                 background-size: cover; 
             }
             .image-icon{
-                background:url(./styles/svg/image-active.svg) no-repeat center;
+                background:url(./styles/svg/menu-image-active.svg) no-repeat center;
             }
             .component-icon{
-                background:url(./styles/svg/container-active.svg) no-repeat center; 
+                background:url(./styles/svg/menu-component-active.svg) no-repeat center; 
                 background-size:cover;
             }
             .authority-icon{
-                background:url(./styles/svg/authority-active.svg) no-repeat center; 
+                background:url(./styles/svg/menu-authority-active.svg) no-repeat center; 
                 background-size:cover;
             }
-	    .attestation-icon{
-                background:url(./styles/svg/attestation-active.svg) no-repeat center ;
+	       .attestation-icon{
+                background:url(./styles/svg/menu-attestation-active.svg) no-repeat center ;
                 background-size:cover;
             }
             .defend-icon{
-                background:url(./styles/svg/defend-active.svg) no-repeat center ;
+                background:url(./styles/svg/menu-defend-active.svg) no-repeat center ;
                 background-size:cover;
             }
             .policy-icon{
-                background:url(./styles/svg/template-active.svg) no-repeat center ;
+                background:url(./styles/svg/menu-template-active.svg) no-repeat center ;
                 background-size:cover;
             }
         }
