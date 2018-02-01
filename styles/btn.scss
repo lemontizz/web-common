@@ -18,7 +18,7 @@
         display:inline-block;
         width:16px;
         height:16px;
-        background: url#{$dir}/styles/images/baseicons.png) no-repeat -42px 0;
+        background: url(#{$dir}/styles/images/baseicons.png) no-repeat -42px 0;
         vertical-align: middle;
     }
     i{
@@ -170,6 +170,6 @@
     color:#667c99;
 }
 .btn-console span{
-    background:url#{$dir}/styles/images/baseicons.png) no-repeat -18px -70px;
+    background:url(#{$dir}/styles/images/baseicons.png) no-repeat -18px -70px;
     margin-top:2px;
 }
