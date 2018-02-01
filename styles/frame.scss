@@ -59,7 +59,7 @@
         .controller-menu{
             width:18px;
             height:18px;
-            background:url(../web-common/styles/svg/collapse.svg) no-repeat;
+            background:url(../web-common/styles/svg/menu-collapse.svg) no-repeat;
             background-size:cover;
             position:absolute;
             left:30px;
@@ -67,7 +67,7 @@
             cursor:pointer;
         }
         .controller-menu.extend{
-            background:url(../web-common/styles/svg/extend.svg) no-repeat;
+            background:url(../web-common/styles/svg/menu-extend.svg) no-repeat;
             width:18px;
             height:18px;
             background-size:cover;
@@ -597,7 +597,7 @@
                     background-size:cover;
                 }
 		        .pool-icon{
-                    background:url(../web-common/styles/svg/menu-cloudPool.svg) no-repeat center;
+                    background:url(../web-common/styles/svg/menu-cloud-pool.svg) no-repeat center;
                     background-size:cover;                    
                 }
                 
@@ -710,6 +710,10 @@
 	       .cloud-icon{
                 background:url(../web-common/styles/svg/menu-cloud-active.svg) no-repeat center ;
                 background-size:cover;
+            }
+            .pool-icon{
+                background:url(../web-common/styles/svg/menu-cloud-pool-active.svg) no-repeat center;
+                background-size:cover;                    
             }
             .instance-icon{
                 background:url(../web-common/styles/svg/menu-instance-active.svg) no-repeat center ;
