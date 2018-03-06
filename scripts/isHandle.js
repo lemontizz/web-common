@@ -202,5 +202,5 @@ let instanceIsHandle = function(action,status) {
 }
 
 export default {
-	instanceIsHandle,
+	instanceIsHandle
 }
