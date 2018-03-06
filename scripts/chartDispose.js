@@ -7,7 +7,7 @@ let getLocalTime = function(nS) {
         m = (date.getMinutes() <10 ? '0' + date.getMinutes() : date.getMinutes()) + ':',
         s = (date.getSeconds() <10 ? '0' + date.getSeconds() : date.getSeconds());
     return Y+M+D+h+m+s;  
-}
+};
 
 let getMaxLengthAxisIndex = function(options,dataType,model) {
     let key_ = dataType,
