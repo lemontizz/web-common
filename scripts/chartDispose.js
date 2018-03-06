@@ -386,7 +386,7 @@ let getChartOptions = function(chartType,name,options,value,dataType,model) {
                 }):[]
             },
             grid:{
-                left:45,
+                left:model==='single'?55:66,
                 bottom:40
             },
             xAxis: {

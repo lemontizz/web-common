@@ -2,22 +2,13 @@
 
 export default {
     pattern: {
-        // num: "[0-9]",
-        // str: "[A-Za-z]",
-        // spe: "[~!@#$%^&*()_+`\\-={}:\";'<>?,.\\/]",
-        // num_str: "(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]",
-        // str_spe: "(?![a-zA-Z]+$)(?![~!@#$%^&*()_+`\\-={}:\";'<>?,.\\/]+$)[A-Za-z!@#$%^&*()_+`\\-={}:\";'<>?,.\\/]",
-        // num_spe: "(?![0-9]+$)(?![~!@#$%^&*()_+`\\-={}:\";'<>?,.\\/]+$)[0-9!@#$%^&*()_+`\\-={}:\";'<>?,.\\/]",
-        // num_str_spe: "(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[~!@#$%^&*()_+`\\-={}:\";'<>?,.\\/])."
-        num: "(?=.*[0-9]).",
-        str: "(?=.*[a-zA-Z]).",
-        spe: "(?=.*[^0-9a-zA-Z]).",
-        num_str: "(?=.*[a-zA-Z])(?=.*[0-9]).",
-        str_spe: "(?=.*[^0-9a-zA-Z])(?=.*[a-zA-Z]).",
-        num_spe: "(?=.*[^0-9a-zA-Z])(?=.*[0-9]).",
-        num_str_spe: "(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[~!@#$%^&*()_+`\\-={}\[\\]:\";'<>?,.\\/]).",
-        passwdNumber: "."
-
+        num: "[0-9]",
+        str: "[A-Za-z]",
+        spe: "[~!@#$%^&*()_+`\\-={}:\";'<>?,.\\/]",
+        num_str: "(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]",
+        str_spe: "(?![a-zA-Z]+$)(?![~!@#$%^&*()_+`\\-={}:\";'<>?,.\\/]+$)[A-Za-z!@#$%^&*()_+`\\-={}:\";'<>?,.\\/]",
+        num_spe: "(?![0-9]+$)(?![~!@#$%^&*()_+`\\-={}:\";'<>?,.\\/]+$)[0-9!@#$%^&*()_+`\\-={}:\";'<>?,.\\/]",
+        num_str_spe: "(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[~!@#$%^&*()_+`\\-={}:\";'<>?,.\\/])."
     },
     setPasswordRule(rule) {
 
@@ -31,29 +22,25 @@ export default {
 
         if ( numStatus && !charStatus && !specStatus) {
             flag = 'num';
-            msgText = '位,必须含有数字';
+            msgText = '位数字';
         } else if (charStatus && !specStatus && !numStatus) {
             flag = 'str';
-            msgText = '位,必须含有字母';
+            msgText = '位大小写字母';
         } else if (specStatus && !charStatus && !numStatus) {
             flag = 'spe';
-            msgText = '位,必须含有特殊字符';
+            msgText = '位特殊字符';
         } else if (charStatus && numStatus && !specStatus) {
             flag = 'num_str';
-            msgText = '位,必须含有字母和数字';
+            msgText = '位大小写字母与数字组合';
         } else if (charStatus && specStatus && !numStatus) {
             flag = 'str_spe';
-            msgText = '位,必须含有特殊字符和字母';
+            msgText = '位特殊字符与大小写字母组合';
         } else if (specStatus && numStatus && !charStatus) {
             flag = 'num_spe';
-            msgText = '位,必须含有特殊字符与数字';
+            msgText = '位特殊字符与数字组合';
         } else if (charStatus && specStatus && numStatus) {
             flag = 'num_str_spe';
-            msgText = '位,特殊字符、大小写字母与数字组合';
-        }
-        else{
-             flag = 'passwdNumber';
-             msgText= '位';
+            msgText = '位特殊字符、大小写字母与数字组合';
         }
         let ruleMsg = this.setRuleMsg(msgText, max_len, min_len);
         let ruleExp = '^' + this.pattern[flag] + '{' + min_len + ',' + max_len + '}$';

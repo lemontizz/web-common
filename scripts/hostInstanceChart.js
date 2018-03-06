@@ -115,16 +115,32 @@ let getMultiChartSeriesData = function(options,item,dataType,instance) {
     	if(dateTime < 3600*24*0.9){
     		arr1 = options[0][0].items.value.map((item)=>{
     		    if(item.value_avg){
-    		        return parseFloat(item.value_avg);
+    		        return parseFloat(item.value_avg).toFixed(2);
     		    }
-    		    return item.value
+    		    return parseFloat(item.value).toFixed(2)
     		})
+    		if(dataType === 'netData') {
+    			arr1 = options[0][0].items.value.map((item)=>{
+    			    if(item.value_avg){
+    			        return parseFloat(item.value_avg/1000/1000);
+    			    }
+    			    return parseFloat(item.value/1000/1000).toFixed(2)
+    			})
+    		}
     		arr2 = options[1][0].items.value.map((item)=>{
     		    if(item.value_avg){
     		        return parseFloat(item.value_avg);
     		    }
-    		    return item.value
+    		    return parseFloat(item.value).toFixed(2)
     		})
+    		if(dataType === 'netData') {
+    			arr2 = options[1][0].items.value.map((item)=>{
+    			    if(item.value_avg){
+    			        return parseFloat(item.value_avg/1000/1000).toFixed(2);
+    			    }
+    			    return parseFloat(item.value/1000/1000).toFixed(2)
+    			})
+    		}
     	}else {
     		arr1 = options[0][0].items.value.filter((item,index)=>{
     		    return index%50 === 0;

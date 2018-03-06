@@ -1,15 +1,21 @@
 let getInstanceStatus = function(status) {
     switch(status) {
-        case 'INSERVICE' :
+        case 'SHUTOFF' :
+            return '已关机';
+	case 'INSERVICE' :
             return '已连接';
-        case 'ACTIVE' :
+	case 'ACTIVE' :
             return '运行中';
         case 'BUILDING' :
             return '构建中';
         case 'DELETED' :
             return '删除中';
+	case 'SUSPENDED':
+            return '挂起';
         case 'ERROR':
             return '错误';
+	case 'BUILD':
+            return '创建中'
         case 'HARD_REBOOT':
             return '重启中';
         case 'MIGRATING':
@@ -20,26 +26,22 @@ let getInstanceStatus = function(status) {
             return '重启中';
         case 'REBUILD':
             return '重构中';
-        case 'RESCUED':
+        case 'RESCUE':
             return '救援中';
         case 'RESIZED':
             return '救援中';
-        case 'SHUTOFF' :
-            return '已关机';
-        case 'SUSPENDED':
-            return '挂起';
-        case 'BUILD':
-            return '创建中'
         case 'UNKNOWN':
             return '未知'
         case 'VERIFY_RESIZE':
-            return '确认扩容'
+            return '确认扩容';
         case 'RESIZE':
             return '扩容中'
         case 'LIVELY':
             return '活跃';
         case 'FREE':
             return '闲置';
+        case 'REBUILD':
+            return '重构中';
         default:
             return status;
     }
@@ -66,55 +68,142 @@ let getFontColor = function(status){
     }
 }
 
-let getAvartarColor = function(index) {
-    let status = (index+6)%7;
+let getAvartarColor = function(result) {
+    if(!result)return;
+    let list = [],
+        reg = new RegExp("[\\u4E00-\\u9FFF]+","g"),
+        temp = result,
+        str = '',
+        num = 0;
+
+    for(let i = 0;i < 25;i++) {
+        list.push(String.fromCharCode((65+i)))
+    }
+
+    if(reg.test(result.substr(0,1))) {
+        let temp_ = result.substr(0,1);
+        for(var i = 0; i < temp_.length; i++){
+            str+="\\u"+parseInt(temp_[i].charCodeAt(0),10).toString(16);
+        }
+
+        temp = str.split('');
+
+        temp.forEach((item,index)=>{
+            if(list.includes(item.toUpperCase())){
+                for(let i = 0;i < list.length; i++){
+                    if(item.toUpperCase() === list[i]){
+                        num += i;
+                    }
+                }
+            }else{
+                if(!isNaN(parseInt(item))) {
+                    num = num + parseInt(item)
+                }
+            }
+
+        })
+    }else {
+        list.forEach((item,index) => {
+            if(item == temp.substring(0,1).toUpperCase()){
+                num = index;
+            }
+        })
+    }
+
+    let status = (num+6)%7;
+    let state = '';
     switch(status){
         case 1:
-            return 'rgb(222,238,251)'
+            state = 'rgb(222,238,251)'
             break;
         case 2:
-            return 'rgba(141,222,204,0.3)'
+            state = 'rgba(141,222,204,0.3)'
             break;
         case 3:
-            return 'rgb(254,249,231)'
+            state = 'rgb(254,249,231)'
             break;
         case 4:
-            return 'rgb(253,238,233)'
+            state = 'rgb(253,238,233)'
             break;
         case 5:
-            return 'rgb(231,246,231)'
-            break;
-        case 6:
-            return 'rgb(249,236,252)'
+            state = 'rgb(231,246,231)'
             break;
         default:
+            state = 'rgb(249,236,252)'
             break;
     }
+    return state;
 }
 
-let getAvartarFontColor = function(index) {
-    let status = (index+6)%7;
+let getAvartarFontColor = function(result) {
+    if(!result)return;
+
+    let list = [],
+        reg = new RegExp("[\\u4E00-\\u9FFF]+","g"),
+        temp = result,
+        str = '',
+        num = 0;
+
+    for(let i = 0;i < 25;i++) {
+        list.push(String.fromCharCode((65+i)))
+    }
+
+    if(reg.test(result.substr(0,1))) {
+        let temp_ = result.substr(0,1);
+        for(var i = 0; i < temp_.length; i++){
+            str+="\\u"+parseInt(temp_[i].charCodeAt(0),10).toString(16);
+        }
+
+        temp = str.split('');
+
+        temp.forEach((item,index)=>{
+            if(list.includes(item.toUpperCase())){
+                for(let i = 0;i < list.length; i++){
+                    if(item.toUpperCase() === list[i]){
+                        num += i;
+                    }
+                }
+            }else{
+                if(!isNaN(parseInt(item))) {
+                    num = num + parseInt(item)
+                }
+            }
+
+        })
+    }else {
+        list.forEach((item,index) => {
+            if(item == temp.substring(0,1).toUpperCase()){
+                num = index;
+            }
+        })
+    }
+
+    
+    let status = (num+6)%7;
+    let state = '';
     switch(status){
         case 1:
-            return '#1c8fed'
+            state = '#1c8fed'
             break;
         case 2:
-            return '#16a085'
+            state = '#16a085'
             break;
         case 3:
-            return '#d7a200'
+            state = '#d7a200'
             break;
         case 4:
-            return '#e86534'
+            state = '#e86534'
             break;
         case 5:
-            return '#599139'
+            state = '#599139'
             break;
-        case 6:
-            return '#aa4db7'
+        default:
+            state = '#aa4db7'
             break;
     }
+    return state;
 }
+
 let getAvartar = function(item) {
     let reg = new RegExp("[\\u4E00-\\u9FFF]+","g");
     if(reg.test(item.substr(0,1))) {
@@ -157,6 +246,15 @@ let getInstanceOperationCN = function(operation) {
             break;
         case 'novnc':
             result = '前往控制台';
+            break;
+        case 'reset':
+            result = '重置';
+            break;
+        case 'quitRescue':
+            result = '退出救援模式';
+            break;
+        case 'rescue':
+            result = '进入救援模式';
             break;
         default:
             break;
@@ -234,6 +332,10 @@ let getStorageBackStatus = function(operation){
     return result;
 }
 
+let ismaintenance = function(server) {
+    return server.metadata.ismaintenance === 'yes'
+}
+
 export default {
     getStorageStatus,
     getStorageBackStatus,
@@ -243,4 +345,5 @@ export default {
     getAvartarFontColor,
     getAvartar,
     getInstanceOperationCN,
+    ismaintenance
 }

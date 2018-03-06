@@ -34,8 +34,12 @@ let trans = {
     'compute.instance.rebuild.end': ['虚拟机', '重建完成'],
     'compute.instance.rebuild.error': ['虚拟机', '重建失败'],
     'compute.instance.rebuild.start': ['虚拟机', '重建中'],
+    'compute.instance.rescue.start':['虚拟机','开始进入救援模式'],
+    'compute.instance.rescue.end':['虚拟机','进入救援模式完毕'],
     'compute.instance.snapshot.start': ['快照', '构建中'],
     'compute.instance.snapshot.end': ['快照', '构建完成'],
+    'compute.instance.rescue.start':['虚拟机','开始进入救援模式'],
+    'compute.instance.rescue.end':['虚拟机','进入救援模式完毕'],
     'volume.create.start': ['数据盘', '创建中'],
     'volume.create.end': ['数据盘', '创建完成'],
     'volume.attach.start': ['数据盘', '挂载中'],
@@ -53,7 +57,7 @@ let trans = {
     "snapshot.delete.start":['快照','删除中'],
     "snapshot.delete.end":['快照',"删除成功"],
     "image.prepare": ['镜像', '准备中'],
-    "image.upload": ['镜像', '上传中'],
+    "image.upload": ['镜像', '制作中'],
     "image.activate": ['镜像', '制作完成'],
     'floatingip.update.start': ['浮动IP', '绑定中'],
     'floatingip.update.end': ['浮动IP', '绑定完成'],
@@ -69,11 +73,14 @@ let getMessage = function(data) {
     } else {
         return data.name + '操作中...'
     }
-
 };
 
+let isInstanceError = function(data) {
+    return data.event_type && data.event_type === 'compute.instance.update' && data.payload.state === 'error';
+}
+
 let isCreateInstanceFinished = function(data) {
-    return data.event_type && (data.event_type === 'compute.instance.create.end' || data.event_type === 'compute.instance.create.error');
+    return (data.event_type === 'compute.instance.create.end' || data.event_type === 'compute.instance.create.error');
 }
 
 let isInstanceOperation = function(data) {
@@ -84,6 +91,14 @@ let isVolumeOperation = function(data) {
     return data.event_type && data.event_type.startsWith('volume.');
 }
 
+let isFinished = function(data) {
+    return data.event_type && ((data.event_type.endsWith('.end') || data.event_type.endsWith('.error')) || data.event_type == 'image.activate');
+}
+
+let isFlavorChange = function(data) {
+    return (['compute.instance.resize.prep.end', 'compute.instance.resize.confirm.end'].includes(data.event_type));
+}
+
 let isInstanceDettachVolume = function(data) {
     return data.event_type === 'compute.instance.volume.detach';
 }
@@ -92,19 +107,19 @@ let isSnapshotOperation = function(data) {
     return data.event_type && data.event_type.startsWith('snapshot.');
 }
 
-let isFinished = function(data) {
-    return data.event_type && (data.event_type.endsWith('.end') || data.event_type.endsWith('.error')) || data.event_type == 'image.activate';
-}
-
-let isFlavorChange = function(data) {
-    return (['compute.instance.resize.prep.end', 'compute.instance.resize.confirm.end'].includes(data.event_type));
-}
-
 let isInstanceDelFinished = function(data) {
     return data.event_type && data.event_type === 'compute.instance.delete.end';
 }
 
 let isRepeatMsg = function(oldMsg, newMsg) {
+    if(!oldMsg || !oldMsg.event_type) {
+        return false;
+    }
+
+    if(!newMsg || !newMsg.event_type) {
+        return false;
+    }
+
     if(oldMsg.event_type !== newMsg.event_type) {
         return false;
     }
@@ -128,7 +143,7 @@ let isRepeatMsg = function(oldMsg, newMsg) {
 }
 
 let isResizeFinished = function(data) {
-    return data.payload && data.payload.old_state && data.payload.old_state === "resized" && data.payload.state === 'stopped';
+    return data.payload.old_state === "resized" && data.payload.state === 'stopped';
 }
 
 let isFloatingIpBindFinished = function(data) {
@@ -136,7 +151,11 @@ let isFloatingIpBindFinished = function(data) {
 }
 
 let isInstanceUserOperation = function(data) {
-    returndata.event_type && data.event_type === 'instance.state.user';
+    return data.event_type && data.event_type === 'instance.state.user';
+}
+
+let isRebuildInstanceStart = function(data) {
+    return data.event_type && data.event_type === 'compute.instance.rebuild.start';
 }
 
 export default {
@@ -145,12 +164,15 @@ export default {
     isInstanceOperation,
     isFinished,
     isVolumeOperation,
-    isFlavorChange,
     isSnapshotOperation,
+    isFlavorChange,
+    isInstanceDelFinished,
     isRepeatMsg,
     isInstanceDelFinished,
     isResizeFinished,
     isFloatingIpBindFinished,
+    isInstanceDettachVolume,
+    isInstanceError,
     isInstanceUserOperation,
-    isInstanceDettachVolume
+    isRebuildInstanceStart,
 }

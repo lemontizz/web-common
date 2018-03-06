@@ -1,5 +1,6 @@
 let rules = {
     email: /^[a-zA-Z0-9_.-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/,
+    //email: /^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/,
     phone: /^1{1}\d{10}$/,
     password: /[\w\W]{6,18}/,
     number:/^\d+(\.\d+)?$/,
