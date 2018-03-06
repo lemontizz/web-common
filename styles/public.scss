@@ -120,7 +120,7 @@ input[type="checkbox"] {
     display: inline-block;
     width: 17px;
     height: 17px;
-    background: url(./styles/images/baseicons.png) no-repeat -86px 0;
+    background: url(#{$dir}/styles/images/baseicons.png) no-repeat -86px 0;
     vertical-align: middle;
     margin-right: 4px;
 }

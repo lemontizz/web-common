@@ -23,7 +23,7 @@
             display:inline-block;
         }
         .checkbox.checked{
-            background:url(./styles/svg/checkbox.svg) no-repeat;
+            background:url(../web-common/styles/svg/checkbox.svg) no-repeat;
             background-size:cover;
             width:12px;
             height:12px;
@@ -59,7 +59,7 @@
                     width:7px;
                     height:9px;
                     display:inline-block;
-                    background:url(./styles/svg/sort-arrow.svg) no-repeat;
+                    background:url(../web-common/styles/svg/sort-arrow.svg) no-repeat;
                     background-size:cover;
                 }
             }
@@ -117,7 +117,7 @@
                     width:20px;
                     height:20px;
                     display:inline-block;
-                    background:url(./styles/images/homepage.png) no-repeat -25px -83px;
+                    background:url(../web-common/styles/images/homepage.png) no-repeat -25px -83px;
                     vertical-align:middle;
                     &:hover{
                         cursor:pointer;
@@ -190,7 +190,7 @@
                 margin-right:0;
             }
             .disk{
-                background:url(./styles/images/bitmap.png) no-repeat 0 center;
+                background:url(../web-common/styles/images/bitmap.png) no-repeat 0 center;
                 background-size:11px 11px;
             }
             .three-point{
@@ -203,7 +203,7 @@
                     width:18px;
                     height:4px;
                     display:inline-block;
-                    background:url(./styles/images/three-dots.png) no-repeat center;
+                    background:url(../web-common/styles/images/three-dots.png) no-repeat center;
                     background-size:100% 100%;
                     position:absolute;
                     top:8px;
@@ -325,7 +325,7 @@
     /*border:1px solid #b8c4ce;*/
     border-radius: 2px;
     display: inline-block;
-    background: url(./styles/svg/search.svg) no-repeat 10px 9px;
+    background: url(../web-common/styles/svg/search.svg) no-repeat 10px 9px;
     background-color:#fff;
     input{
         border:none;
@@ -512,7 +512,7 @@
     cursor: pointer;
     display: inline-block;
     .checkbox {
-        background: #fff url(./styles/images/check.png) no-repeat center;
+        background: #fff url(../web-common/styles/images/check.png) no-repeat center;
         font-size: 14px;
         width: 12px;
         height: 12px;
@@ -577,7 +577,7 @@
     font-size: 12px;
     color:#555;
     position:relative;
-    background: url(./styles/images/baseicons.png) no-repeat -138px -193px;
+    background: url(../web-common/styles/images/baseicons.png) no-repeat -138px -193px;
     display: inline-block;
     vertical-align: middle;
 }
@@ -863,7 +863,7 @@
                 top: 12px;
                 width: 18px;
                 height: 18px;
-                background: url(./styles/images/close.png) no-repeat center;
+                background: url(../web-common/styles/images/close.png) no-repeat center;
                 cursor:pointer;
             }
         }
@@ -945,7 +945,7 @@
                 top: 12px;
                 width: 18px;
                 height: 18px;
-                background: url(./styles/images/close.png) no-repeat center;
+                background: url(../web-common/styles/images/close.png) no-repeat center;
                 cursor:pointer;
             }
         }
@@ -993,7 +993,7 @@
                 height:22px;
                 display:inline-block;
                 vertical-align:middle;
-                background:url(./styles/images/common_icons.png) no-repeat -78px 0;
+                background:url(../web-common/styles/images/common_icons.png) no-repeat -78px 0;
             }
             .tip-des{
                 display:inline-block;
