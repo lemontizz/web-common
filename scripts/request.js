@@ -30,9 +30,14 @@ let request401 = function (data) {
 
 let request403 = function (data) {
     let message = data && data.error && data.error.message ? data.error.message : '身份信息验证不通过';
-    store.dispatch('SHOW_ALERT', {
-        message,
-    })
+
+    if(message.includes('token ' + storage.tokenId() + ' not found')) {
+        request401();
+    } else {
+        store.dispatch('SHOW_ALERT', {
+            message,
+        })
+    }
 };
 let request500 = function (data) {
     let message = data && data.error && data.error.message ? data.error.message : '服务器出错，请求失败';
