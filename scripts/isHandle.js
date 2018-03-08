@@ -148,7 +148,7 @@ let instanceIsHandle = function(action,status) {
 			isHandle = instanceStatusOption.includes(status);
 			break;
 		case 'createImage':
-			instanceStatusOption = ['SHUTOFF','SUSPENDED'];
+			instanceStatusOption = ['SHUTOFF'];
 			isHandle = instanceStatusOption.includes(status);
 			break;
 		case 'coldMigrate':
