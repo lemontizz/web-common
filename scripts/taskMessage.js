@@ -158,6 +158,10 @@ let isRebuildInstanceStart = function(data) {
     return data.event_type && data.event_type === 'compute.instance.rebuild.start';
 }
 
+let isRebuildInstanceFinished = function(data) {
+    return data.event_type && data.event_type === 'compute.instance.rebuild.end';
+}
+
 export default {
     getMessage,
     isCreateInstanceFinished,
@@ -174,5 +178,6 @@ export default {
     isInstanceDettachVolume,
     isInstanceError,
     isInstanceUserOperation,
+    isRebuildInstanceStart,
     isRebuildInstanceStart,
 }
