@@ -143,7 +143,7 @@ let isRepeatMsg = function(oldMsg, newMsg) {
 }
 
 let isResizeFinished = function(data) {
-    return data.payload.old_state === "resized" && data.payload.state === 'stopped';
+    return data.payload && data.payload.old_state && data.payload.old_state === "resized" && data.payload.state === 'stopped';
 }
 
 let isFloatingIpBindFinished = function(data) {
