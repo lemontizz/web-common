@@ -1,6 +1,7 @@
 let clock = function(){
 	var canid=document.getElementById('canid');
 	var ct=canid.getContext('2d');
+	var time = moment(new Date($.ajax({async:false}).getResponseHeader("Date")))
 	canid.width=600;
 	canid.height=600;
 
@@ -66,10 +67,10 @@ let clock = function(){
 		ct.stroke();
 
 		ct.fill();
-			var time=new Date();
-			var h=time.getHours();
-			var m=time.getMinutes();
-			var s=time.getSeconds();
+			var new_time=time.add(1, 'seconds');
+			var h=new_time.hour();
+			var m=new_time.minute();
+			var s=new_time.second();
 			var mj=m*6+(s/60)*6-90;
 			var sj=s*6-90;
 			var hj=h*30+(m/60)*30+(s/3600)*30-90;
@@ -99,3 +100,6 @@ let clock = function(){
 export default {
     clock
 }
+
+import moment from 'moment';
+import $ from 'jquery';
