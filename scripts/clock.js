@@ -1,7 +1,8 @@
-let clock = function(){
+let clock = function(serverTime){
 	var canid=document.getElementById('canid');
 	var ct=canid.getContext('2d');
-	var time = moment(new Date($.ajax({async:false}).getResponseHeader("Date")))
+	// var time = moment(new Date($.ajax({async:false}).getResponseHeader("Date")))
+	var time = moment(serverTime);
 	canid.width=600;
 	canid.height=600;
 
