@@ -18,7 +18,7 @@
         display:inline-block;
         width:16px;
         height:16px;
-        background: url(#{$dir}/styles/images/baseicons.png) no-repeat -42px 0;
+        background: url(./styles/images/baseicons.png) no-repeat -42px 0;
         vertical-align: middle;
     }
     i{
@@ -94,6 +94,9 @@
 .btn-edit span {
     background-position-y: -288px;
 }
+.btn-switch span {
+    background-position: -18px -69px;
+}
 .btn-edit.btn-active span {
     background-position-y: -266px;
 }
@@ -140,16 +143,18 @@
     background-position: -64px -44px;
 }
 .btn-image span {
+    background: url(./styles/images/baseicons_1.png) no-repeat;
     background-position: -64px -370px;
 }
 .btn-image.btn-active span {
+    background: url(./styles/images/baseicons_1.png) no-repeat;
     background-position: -64px -350px;
 }
 .disabled{
     opacity: .4;   
     cursor:not-allowed;
     pointer-events: none;
-    background: #F4F4F4 !important;
+    background-color: #F4F4F4 !important;
 }
 .btn-active.disabled {
     color: #555;
@@ -170,6 +175,6 @@
     color:#667c99;
 }
 .btn-console span{
-    background:url(#{$dir}/styles/images/baseicons.png) no-repeat -18px -70px;
+    background:url(./styles/images/baseicons.png) no-repeat -18px -70px;
     margin-top:2px;
 }

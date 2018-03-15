@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="22" viewBox="0 0 64 22">
+    <g fill="none" fill-rule="evenodd">
+        <rect width="64" height="22" fill="#F9F9FA" rx="11"/>
+        <text fill="#ACB5C3" font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400">
+            <tspan x="20" y="14">全选</tspan>
+        </text>
+    </g>
+</svg>
