@@ -29,8 +29,6 @@
         width: 200px;
         box-shadow:none;
         text-indent: 14px;
-        // background: url(./styles/images/evm_logo.png) no-repeat 19px center;
-        // background-size: 150px 55px;
         font-family: Krungthep;
         background-color: #62a8ea;
         box-shadow: -4px 0 5px 0 #111519;
@@ -38,10 +36,9 @@
         span{
             display: inline-block;
             width:180px;
-            height:60px;
-            background: url(./styles/images/logo.png) no-repeat 0px center;
-            background-size: 150px 50px;
+            height: 60px;
         }
+
     }
     .nav-content{
         margin-left: 200px;
@@ -51,7 +48,7 @@
         .quick-create{
             width:14px;
             height:14px;
-            background:url(./styles/svg/topbar-quick-create.svg) no-repeat;
+            background:url(../web-common/styles/svg/topbar-quick-create.svg) no-repeat;
             background-size:cover;
             position:absolute;
             left:70px;
@@ -61,7 +58,7 @@
         .controller-menu{
             width:18px;
             height:18px;
-            background:url(./styles/svg/collapse.svg) no-repeat;
+            background:url(../web-common/styles/svg/collapse.svg) no-repeat;
             background-size:cover;
             position:absolute;
             left:30px;
@@ -69,7 +66,7 @@
             cursor:pointer;
         }
         .controller-menu.extend{
-            background:url(./styles/svg/extend.svg) no-repeat;
+            background:url(../web-common/styles/svg/extend.svg) no-repeat;
             width:18px;
             height:18px;
             background-size:cover;
@@ -81,6 +78,7 @@
     }
     .nav-operation {
         float: right;
+    margin-right: 20px;
         span{
             float: left;
         }
@@ -88,8 +86,8 @@
         div.message{
             width: 14px;
             height: 14px;
-            background: url(./styles/svg/task.svg) no-repeat center;
-            background-size: 100%;
+            background: url(../web-common/styles/svg/task.svg) no-repeat center;
+            background-size: cover;
             margin-top: 24px;
             margin-right: 37px;
             cursor: pointer;
@@ -112,79 +110,12 @@
                 border:1px solid #fff;
             }
         }
-        .item {
-            float: left;
-            position: relative;
-            padding: 0 15px;
-            font-size: 0;
-            cursor: default;
-            line-height: 60px;
-            .text {
-                color: #979898;
-                font-size: 14px;
-                vertical-align: middle;
-            }
-            .arrow {
-                display: inline-block;
-                vertical-align: middle;
-                width: 0;
-                height: 0;
-                line-height: 0;
-                border-width: 6px;
-                border-style: solid;
-                border-color: transparent #979898 transparent transparent;
-                position: relative;
-                top: 5px;
-                margin-left: 5px;
-                float: none;
-            }
-            .nav-body {
-                background: #fff;
-                width: 100%;
-                right: 0;
-                top: 59px;
-                position: absolute;
-                z-index: 1;
-                box-shadow: 0px 2px 5px 0px #ccc;
-                display: none;
-                color: #979898;
-                ul {
-                    line-height: 40px;
-                    li {
-                        font-size: 14px;
-                        padding-left: 15px;
-                        white-space: nowrap;
-                        &:hover {
-                            background: #EBF4F9;
-                        }
-                        a {
-                            cursor: pointer;
-                        }
-                    }
-                    li.active {
-                        background: #EBF4F9;
-                    }
-                }
-            }
-            &:hover {
-                .nav-body {
-                    display: block;
-                }
-                .arrow {
-                    top: -5px;
-                    border-color: transparent transparent transparent #979898;
-                }
-            }
-        }
-        ul.nav-dropdown {
-            float: right;
-        }
         div.warning-message{
             float: left;
             width: 14px;
             height: 14px;
-            background: url(./styles/svg/alert.svg) no-repeat center center;
-            background-size: 100%;
+            background: url(../web-common/styles/svg/alert.svg) no-repeat center center;
+            background-size:cover;
             position: relative;
             margin-right: 36px;
             margin-top: 24px;
@@ -211,21 +142,68 @@
             }
 
         }
-        span.user{
+    .user{
             font-size: 14px;
             line-height: 14px;
-            text-align: left;
             color: #979898;
-            margin-top: 24px;
+            padding-top:24px;
+            padding-bottom: 22px;
+            margin-right:10px;
+            cursor: pointer;
+            display:inline-block;
+            position: relative;
+            .badge{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: rgba(110,220,225,0.3);
+                font-family: PingFangSC;
+                font-size: 12px;
+                font-weight: 600;
+                text-align: center;
+                color: #16a1a7;
+                line-height:30px;
+                margin-right:20px;
+                margin-top:-7px;
+            }
+            .arrow{
+                display: inline-block;
+                vertical-align: middle;
+                width: 0;
+                height: 0;
+                line-height: 0;
+                border-width: 6px;
+                border-style: solid;
+                border-color: transparent #979898 transparent transparent;
+                position: relative;
+                top: 4px;
+                margin-left: 4px;
+                float: none;
+            }
+            .operation{
+                position:absolute;
+                text-align: center;
+                box-shadow: 0px 2px 5px 0px #ccc;
+                width:85px;
+                top:60px;
+                right: 0;
+                background: #fff;
+                line-height: 40px;
+                z-index: 99;
+                display:none;
+                li.active,li:hover{
+                    background: #EBF4F9;
+                }
+            }
         }
-        a.nav-body{
-            float:left;
-            width: 16px;
-            height: 18px;
-            margin-top: 24px;
-            margin-left: 5px;
-            margin-right: 43px;
-            margin-right: 43px;
+        .user:hover{
+            .operation{
+                display: block;
+            }
+            .arrow{
+                top: -5px;
+                border-color: transparent transparent transparent #979898;
+            }
         }
         div.task-list{
             box-sizing: border-box;
@@ -261,7 +239,7 @@
                     width:19px;
                     height:19px;
                     position: absolute;
-                    background: url(./styles/images/baseicons.png) no-repeat -138px -305px;
+                    background: url(../web-common/styles/images/baseicons.png) no-repeat -138px -305px;
                     top: 18px;
                     right: 22px;
                     cursor: pointer;
@@ -314,7 +292,6 @@
                     font-size: 11px;
                 }
             }
-
         }
         div.warn-list{
             box-sizing:border-box;
@@ -350,7 +327,7 @@
                     width:19px;
                     height:19px;
                     position: absolute;
-                    background: url(./styles/images/baseicons.png) no-repeat -138px -305px;
+                    background: url(../web-common/styles/images/baseicons.png) no-repeat -138px -305px;
                     top: 18px;
                     right: 22px;
                     cursor: pointer;
@@ -416,7 +393,7 @@
                     font-size: 11px;
                 }
                 .text-up{
-                   color: #839192;
+                    color: #839192;
                     font-size: 14px;
                     line-height:44px;
                     vertical-align: middle;
@@ -427,69 +404,7 @@
                 }
             }
         }
-        .user{
-            font-size: 14px;
-            line-height: 14px;
-            color: #979898;
-            padding-top:24px;
-            padding-bottom: 22px;
-            margin-right:10px;
-            cursor: pointer;
-            display:inline-block;
-            position: relative;
-            .badge{
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                background-color: rgba(110,220,225,0.3);
-                font-family: PingFangSC;
-                font-size: 12px;
-                font-weight: 600;
-                text-align: center;
-                color: #16a1a7;
-                line-height:30px;
-                margin-right:20px;
-                margin-top:-7px;
-            }
-            .arrow{
-                display: inline-block;
-                vertical-align: middle;
-                width: 0;
-                height: 0;
-                line-height: 0;
-                border-width: 6px;
-                border-style: solid;
-                border-color: transparent #979898 transparent transparent;
-                position: relative;
-                top: 4px;
-                margin-left: 4px;
-                float: none;
-            }
-            .operation{
-                position:absolute;
-                text-align: center;
-                box-shadow: 0px 2px 5px 0px #ccc;
-                width:85px;
-                top:60px;
-                right: 0;
-                background: #fff;
-                line-height: 40px;
-                z-index: 99;
-                display:none;
-                li.active,li:hover{
-                    background: #EBF4F9;
-                }
-            }
-        }
-        .user:hover{
-            .operation{
-                display: block;
-            }
-            .arrow{
-                top: -5px;
-                border-color: transparent transparent transparent #979898;
-            }
-        }
+        
     }
 }
 .page-nav.extend{
@@ -499,9 +414,6 @@
     .nav-title{
         width:200px;
         transition:.7s all ease;
-        span{
-            width:180px;
-        }
     }
     .nav-content{
         margin-left:200px;
@@ -516,11 +428,6 @@
     .nav-title{
         width:50px;
         transition:.7s all ease;
-        background-position:14px 3px;
-        span{
-            width:31px;
-            background-position: 0px 5px;
-        }
     }
     .nav-content{
         margin-left:50px;
@@ -562,8 +469,6 @@
             cursor:default;
         }
         .item{
-            height: 35px;
-            position: relative;
             a{
                 width:100%;
                 height:35px;
@@ -573,7 +478,7 @@
                 padding-left:50px;
                 box-sizing:border-box;
                 font-size:14px;
-                position: absolute;
+                position: relative;
                 display: inline-block;
                 white-space: nowrap;
 
@@ -586,83 +491,105 @@
                     z-index: 1;
                 }
                 .home-icon{
-                    background:url(./styles/svg/menu-home.svg) no-repeat center center;                 
+                    background:url(../web-common/styles/svg/menu-home.svg) no-repeat center center;                 
                 }
-                
-                .host-icon{
-                    background:url(./styles/svg/menu-host.svg) no-repeat center center;
-                    background-size: cover;
-                }
-                
-                .cloud-icon{
-                    background:url(./styles/svg/menu-instance.svg) no-repeat center;
+        .cloud-icon{
+                    background:url(../web-common/styles/svg/menu-cloud.svg) no-repeat center;
                     background-size:cover;
                 }
-
+                .host-icon{
+                    background:url(../web-common/styles/svg/menu-host.svg) no-repeat center center;
+                    background-size: cover;
+                }          
+        .instance-icon{
+                    background:url(../web-common/styles/svg/menu-instance.svg) no-repeat center;
+                    background-size:cover;
+                }
+        .pool-icon{
+                    background:url(../web-common/styles/svg/menu-cloudPool.svg) no-repeat center;
+                    background-size:cover;                    
+                }
                 .group-icon{
-                    background:url(./styles/svg/menu-group.svg) no-repeat center;
+                    background:url(../web-common/styles/svg/menu-group.svg) no-repeat center;
                 }
-                
                 .recycle-icon{
-                    background:url(./styles/svg/menu-recycle.svg) no-repeat center
+                    background:url(../web-common/styles/svg/menu-recycle.svg) no-repeat center
                 }
-                
+                .device-icon{
+                    background:url(../web-common/styles/svg/menu-device.svg) no-repeat center ;
+                    background-size:cover;
+                }
                 .user-icon{
-                    background:url(./styles/svg/menu-user.svg) no-repeat center; 
+                    background:url(../web-common/styles/svg/menu-user.svg) no-repeat center; 
+                }    
+        .warn-icon{
+                    background:url(../web-common/styles/svg/menu-monitor.svg) no-repeat center;
+                    background-size:cover;
                 }
-                
-                .warn-icon{
-                    background:url(./styles/svg/menu-monitor.svg) no-repeat center;
-                }
-                
-                .net-icon{
-                    background:url(./styles/svg/menu-network.svg) no-repeat center;
+        .net-icon{
+                    background:url(../web-common/styles/svg/menu-network.svg) no-repeat center;
                 }
                 .float-icon{
-                    background:url(./styles/svg/menu-floatIp.svg) no-repeat center;
+                    background:url(../web-common/styles/svg/menu-floatIp.svg) no-repeat center;
                     background-size:cover;
                 }
                 .topo-icon{
-                    background:url(./styles/svg/menu-topology.svg) no-repeat center;
+                    background:url(../web-common/styles/svg/menu-topology.svg) no-repeat center;
+                    background-size:cover;
+                }
+                    
+        .policy-icon{
+                    background:url(../web-common/styles/svg/menu-policy.svg) no-repeat center ;
+                    background-size:cover;
+                }
+                .manage-icon{
+                    background:url(../web-common/styles/svg/menu-manage.svg) no-repeat center ;
                     background-size:cover;
                 }
                 .log-icon{
-                    background:url(./styles/svg/menu-log.svg) no-repeat center; 
+                    background:url(../web-common/styles/svg/menu-log.svg) no-repeat center; 
                 }
                 
                 .volume-icon{
-                    background:url(./styles/svg/menu-volume.svg) no-repeat center;
+                    background:url(../web-common/styles/svg/menu-volume.svg) no-repeat center;
                 }
                 
                 .system-icon{
-                    background:url(./styles/svg/menu-system.svg) no-repeat center; 
+                    background:url(../web-common/styles/svg/menu-system.svg) no-repeat center; 
                 }
-                
                 .template-icon{
-                    background:url(./styles/svg/menu-template.svg) no-repeat center;
+                    background:url(../web-common/styles/svg/menu-template.svg) no-repeat center;
                     background-size: cover; 
                 }
                 
-                .image-icon{
-                    background:url(./styles/svg/menu-image.svg) no-repeat center; 
+        .image-icon{
+                    background:url(../web-common/styles/svg/menu-image.svg) no-repeat center; 
                 }
                 .components-icon{
-                    background:url(./styles/svg/menu-components.svg) no-repeat center; 
-                    background-size:cover;
-                }
-                .authority-icon{
-                    background:url(./styles/svg/menu-authority.svg) no-repeat center; 
-                    background-size:cover;
-                }
-                .storagePool-icon {
-                    background:url(./styles/svg/menu-storagePool.svg) no-repeat center; 
-                    background-size:cover;
-                }
-                .externalStorage-icon {
-                    background:url(./styles/svg/menu-externalStorage.svg) no-repeat center; 
+                    background:url(../web-common/styles/svg/menu-components.svg) no-repeat center; 
                     background-size:cover;
                 }
                 
+        .authority-icon{
+                    background:url(../web-common/styles/svg/menu-authority.svg) no-repeat center; 
+                    background-size:cover;
+                }
+                .attestation-icon{
+                    background:url(../web-common/styles/svg/menu-attestation.svg) no-repeat center ;
+                    background-size:cover;
+                }
+                .storagePool-icon {
+                    background:url(../web-common/styles/svg/menu-storagePool.svg) no-repeat center; 
+                    background-size:cover;
+                }
+        .defend-icon{
+                    background:url(../web-common/styles/svg/menu-defend.svg) no-repeat center ;
+                    background-size:cover;
+                }
+                .externalStorage-icon {
+                    background:url(../web-common/styles/svg/menu-externalStorage.svg) no-repeat center; 
+                    background-size:cover;
+                }
                 i{
                     color:#bac1ca;
                     white-space: nowrap;
@@ -674,7 +601,6 @@
                     }
                 }
             }
-            
         }
         .item.active{
             background-color:rgb(45,55,63);
@@ -682,71 +608,106 @@
                 color:#fff !important;
             }
             .home-icon{
-                background:url(./styles/svg/menu-home-active.svg) no-repeat center center;
+                background:url(../web-common/styles/svg/menu-home-active.svg) no-repeat center center;
+            }
+        .cloud-icon{
+                background:url(../web-common/styles/svg/menu-cloud-active.svg) no-repeat center ;
+                background-size:cover;
+            }
+            .pool-icon{
+                background:url(../web-common/styles/svg/menu-cloudPool-active.svg) no-repeat center ;
+                background-size:cover;
+            }
+            .device-icon{
+                background:url(../web-common/styles/svg/menu-device-active.svg) no-repeat center ;
+                background-size:cover;
             }
             .host-icon{
-                background:url(./styles/svg/menu-host-active.svg) no-repeat center center;
+                background:url(../web-common/styles/svg/menu-host-active.svg) no-repeat center center;
                 background-size: cover;               
             }
             .cloud-icon{
-                background:url(./styles/svg/menu-instance-active.svg) no-repeat center ;
+                background:url(../web-common/styles/svg/menu-instance-active.svg) no-repeat center ;
                 background-size:cover;               
             }
             .group-icon{
-                background:url(./styles/svg/menu-group-active.svg) no-repeat center;
+                background:url(../web-common/styles/svg/menu-group-active.svg) no-repeat center;
             }
             .recycle-icon{
-                background:url(./styles/svg/menu-recycle-active.svg) no-repeat center
+                background:url(../web-common/styles/svg/menu-recycle-active.svg) no-repeat center
             }
             .user-icon{
-                background:url(./styles/svg/menu-user-active.svg) no-repeat center;
+                background:url(../web-common/styles/svg/menu-user-active.svg) no-repeat center;
             }
             .warn-icon{
-                background:url(./styles/svg/menu-monitor-active.svg) no-repeat center;
+                background:url(../web-common/styles/svg/menu-monitor-active.svg) no-repeat center;
+                background-size:cover;
             }
-            .net-icon{
-                background:url(./styles/svg/menu-network-active.svg) no-repeat center;
+        .net-icon{
+                background:url(../web-common/styles/svg/menu-network-active.svg) no-repeat center;
             }
             .float-icon{
-                background:url(./styles/svg/menu-floatIp-active.svg) no-repeat center;
+                background:url(../web-common/styles/svg/menu-floatIp-active.svg) no-repeat center;
                 background-size:cover;                
             }
             .topo-icon{
-                background:url(./styles/svg/menu-topology-active.svg) no-repeat center;
+                background:url(../web-common/styles/svg/menu-topology-active.svg) no-repeat center;
+                background-size:cover;
+            }
+            .manage-icon{
+                background:url(../web-common/styles/svg/menu-manage-active.svg) no-repeat center ;
                 background-size:cover;
             }
             .log-icon{
-                background:url(./styles/svg/menu-log-active.svg) no-repeat center;
+                background:url(../web-common/styles/svg/menu-log-active.svg) no-repeat center;
             }
             .volume-icon{
-                background:url(./styles/svg/menu-volume-active.svg) no-repeat center;
+                background:url(../web-common/styles/svg/menu-volume-active.svg) no-repeat center;
             }
             .system-icon{
-                background:url(./styles/svg/menu-system-active.svg) no-repeat center;
+                background:url(../web-common/styles/svg/menu-system-active.svg) no-repeat center;
             }
             .template-icon{
-                background:url(./styles/svg/menu-template-active.svg) no-repeat center;
+                background:url(../web-common/styles/svg/menu-template-active.svg) no-repeat center;
                 background-size: cover; 
             }
             .image-icon{
-                background:url(./styles/svg/menu-image-active.svg) no-repeat center;
+                background:url(../web-common/styles/svg/menu-image-active.svg) no-repeat center;
+            }
+        .attestation-icon{
+                background:url(../web-common/styles/svg/menu-attestation-active.svg) no-repeat center ;
+                background-size:cover;
+            }
+            .defend-icon{
+                background:url(../web-common/styles/svg/menu-defend-active.svg) no-repeat center ;
+                background-size:cover;
+            }
+            .policy-icon{
+                background:url(../web-common/styles/svg/menu-policy-active.svg) no-repeat center ;
+                background-size:cover;
             }
             .components-icon{
-                background:url(./styles/svg/menu-components-active.svg) no-repeat center; 
+                background:url(../web-common/styles/svg/menu-components-active.svg) no-repeat center; 
                 background-size:cover;
             }
             .authority-icon{
-                background:url(./styles/svg/menu-authority-active.svg) no-repeat center; 
+                background:url(../web-common/styles/svg/menu-authority-active.svg) no-repeat center; 
                 background-size:cover;
             }
             .storagePool-icon {
-                background:url(./styles/svg/menu-storagePool-active.svg) no-repeat center; 
+                background:url(../web-common/styles/svg/menu-storagePool-active.svg) no-repeat center; 
                 background-size:cover;
             }
             .externalStorage-icon {
-                background:url(./styles/svg/menu-externalStorage-active.svg) no-repeat center; 
+                background:url(../web-common/styles/svg/menu-externalStorage-active.svg) no-repeat center; 
                 background-size:cover;
-            }
+        }
+    }
+    .lowe-lever-icon{
+            float:right;
+            margin-top:20px;
+            margin-right:15px;
+            margin-left:0;
         }
     }
 }
@@ -814,7 +775,7 @@
             width:16px;
             height:16px;
             margin-left:10px;
-            background:url(./styles/svg/help.svg) no-repeat center;
+            background:url(../web-common/styles/svg/help.svg) no-repeat center;
             background-size: cover;
         }
         .introduce{
@@ -832,7 +793,7 @@
             width:24px;
             height:24px;
             display:inline-block;
-            background:url(./styles/images/baseicons.png) no-repeat -262px 0;
+            background:url(../web-common/styles/images/baseicons.png) no-repeat -262px 0;
             cursor:pointer;
             margin-right: 10px;
         }
@@ -849,5 +810,5 @@
 }
 
 .page-alert {
-    z-index: 1000;
+    z-index: 1002;
 }
