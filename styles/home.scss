@@ -178,7 +178,7 @@
 			.desk-bg{
 				width:200px;
 				height:200px;
-				background:url(./styles/svg/noInformation.svg) no-repeat center center;
+				background:url(#{$dir}/styles/svg/noInformation.svg) no-repeat center center;
 				background-size:cover;
 				position:absolute;
 				top:50%;
@@ -422,7 +422,7 @@
 								width:12px;
 								height:12px;
 								display:inline-block;
-								background:url(./styles/svg/risk.svg) no-repeat center;
+								background:url(#{$dir}/styles/svg/risk.svg) no-repeat center;
 								background-size:cover;
 							}
 						}
@@ -432,7 +432,7 @@
 								width:12px;
 								height:12px;
 								display:inline-block;
-								background:url(./styles/svg/remind.svg) no-repeat center;
+								background:url(#{$dir}/styles/svg/remind.svg) no-repeat center;
 								background-size:cover;
 
 							}
@@ -443,7 +443,7 @@
 								width:12px;
 								height:10px;
 								display:inline-block;
-								background:url(./styles/svg/warnning.svg) no-repeat center;
+								background:url(#{$dir}/styles/svg/warnning.svg) no-repeat center;
 								background-size:cover;
 							}
 						}
