@@ -3,20 +3,11 @@ import router from '@/router/index';
 import storage from '@/scripts/storage';
 
 let request401 = function (data) {
-    store.dispatch('SHOW_ALERT', {
+    gotoLogin();
+    store.dispatch('CLEAR_TIP');
+    store.dispatch('SHOW_TIP', {
+        type: 'danger',
         message: '会话已过期，请重新登录',
-        origin: 'error',
-        errorInfo: JSON.stringify(data),
-        callbacks: {
-            onConfirm () {
-                gotoLogin();
-                return;
-            },
-            onCancel () {
-                gotoLogin();
-                return;
-            }
-        }
     });
 };
 
@@ -33,11 +24,12 @@ let request403 = function (data) {
     if(message.includes('token ' + storage.tokenId() + ' not found')) {
         gotoLogin();
     } else if(message === '身份信息验证不通过') {
+        gotoLogin();
+        store.dispatch('CLEAR_TIP');
         store.dispatch('SHOW_TIP', {
             type: 'danger',
             message: '身份认证已过期，请重新登录',
         });
-        gotoLogin();
     } else {
         store.dispatch('SHOW_ALERT', {
             message,
@@ -175,6 +167,7 @@ let request = function (options) {
                 if(storage.tokenId()) {
                     opts.headers['X-Auth-Token'] = storage.tokenId();
                 } else {
+                    store.dispatch('CLEAR_TIP');
                     store.dispatch('SHOW_TIP', {
                         type: 'danger',
                         message: '身份认证已过期，请重新登录',
