@@ -1,3 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12">
-    <path fill="#BAC1CA" fill-rule="evenodd" d="M5.6 0H1.4C.63 0 .007.675.007 1.5L0 10.5c0 .825.63 1.5 1.4 1.5h11.2c.77 0 1.4-.675 1.4-1.5V3c0-.825-.63-1.5-1.4-1.5H7L5.6 0z"/>
-</svg>
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1521186206797" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1760" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"><defs><style type="text/css"></style></defs><path d="M896 256v576a128 128 0 0 1-128 128H256a128 128 0 0 1-128-128V256H64V192h192V128a64 64 0 0 1 64-64h384a64 64 0 0 1 64 64v64h192v64h-64z m-192-128H320v64h384V128z m128 128H192v576a64 64 0 0 0 64 64h512a64 64 0 0 0 64-64V256zM576 384h64v384H576V384zM384 384h64v384H384V384z" p-id="1761"></path></svg>
