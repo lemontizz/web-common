@@ -493,7 +493,7 @@
                 .home-icon{
                     background:url(#{$dir}/styles/svg/menu-home.svg) no-repeat center center;                 
                 }
-        .cloud-icon{
+                .cloud-icon{
                     background:url(#{$dir}/styles/svg/menu-cloud.svg) no-repeat center;
                     background-size:cover;
                 }
@@ -501,11 +501,11 @@
                     background:url(#{$dir}/styles/svg/menu-host.svg) no-repeat center center;
                     background-size: cover;
                 }          
-        .instance-icon{
+                .instance-icon{
                     background:url(#{$dir}/styles/svg/menu-instance.svg) no-repeat center;
                     background-size:cover;
                 }
-        .pool-icon{
+                .pool-icon{
                     background:url(#{$dir}/styles/svg/menu-cloudPool.svg) no-repeat center;
                     background-size:cover;                    
                 }
@@ -522,11 +522,11 @@
                 .user-icon{
                     background:url(#{$dir}/styles/svg/menu-user.svg) no-repeat center; 
                 }    
-        .warn-icon{
+                .warn-icon{
                     background:url(#{$dir}/styles/svg/menu-monitor.svg) no-repeat center;
                     background-size:cover;
                 }
-        .net-icon{
+                .net-icon{
                     background:url(#{$dir}/styles/svg/menu-network.svg) no-repeat center;
                 }
                 .float-icon{
@@ -538,7 +538,7 @@
                     background-size:cover;
                 }
                     
-        .policy-icon{
+                .policy-icon{
                     background:url(#{$dir}/styles/svg/menu-policy.svg) no-repeat center ;
                     background-size:cover;
                 }
@@ -561,8 +561,7 @@
                     background:url(#{$dir}/styles/svg/menu-template.svg) no-repeat center;
                     background-size: cover; 
                 }
-                
-        .image-icon{
+                .image-icon{
                     background:url(#{$dir}/styles/svg/menu-image.svg) no-repeat center; 
                 }
                 .components-icon{
@@ -570,7 +569,7 @@
                     background-size:cover;
                 }
                 
-        .authority-icon{
+                .authority-icon{
                     background:url(#{$dir}/styles/svg/menu-authority.svg) no-repeat center; 
                     background-size:cover;
                 }
@@ -582,7 +581,7 @@
                     background:url(#{$dir}/styles/svg/menu-storagePool.svg) no-repeat center; 
                     background-size:cover;
                 }
-        .defend-icon{
+                .defend-icon{
                     background:url(#{$dir}/styles/svg/menu-defend.svg) no-repeat center ;
                     background-size:cover;
                 }
@@ -627,8 +626,12 @@
                 background-size: cover;               
             }
             .cloud-icon{
-                background:url(#{$dir}/styles/svg/menu-instance-active.svg) no-repeat center ;
+                background:url(#{$dir}/styles/svg/menu-cloud-active.svg) no-repeat center ;
                 background-size:cover;               
+            }
+            .instance-icon{
+                background:url(#{$dir}/styles/svg/menu-instance-active.svg) no-repeat center;
+                background-size:cover;
             }
             .group-icon{
                 background:url(#{$dir}/styles/svg/menu-group-active.svg) no-repeat center;
