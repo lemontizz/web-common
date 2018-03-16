@@ -183,7 +183,7 @@ let request = function (options) {
                         type: 'danger',
                         message: '身份认证已过期，请重新登录',
                     });
-                    router.push('/login');
+                    gotoLogin();
                     resolve({});
                     return;
                 }
