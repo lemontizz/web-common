@@ -21,7 +21,7 @@ let gotoLogin = function() {
 let request403 = function (data) {
     let message = data && data.error && data.error.message ? data.error.message : '身份信息验证不通过';
 
-    if(message.includes('token ' + storage.tokenId() + ' not found')) {
+    if(message.startsWith('token ') && message.endsWith(' not found')) {
         gotoLogin();
     } else if(message === '身份信息验证不通过') {
         gotoLogin();
