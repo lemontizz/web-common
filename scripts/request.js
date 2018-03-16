@@ -9,30 +9,29 @@ let request401 = function (data) {
         errorInfo: JSON.stringify(data),
         callbacks: {
             onConfirm () {
-                store.dispatch('HIDE_ALERT');
-                store.dispatch('CLEAR_TOKEN');
-		storage.clearToken();
-                store.dispatch('CLEAR_MONITOR_AUTH');
-                router.push('/login')
+                gotoLogin();
                 return;
             },
             onCancel () {
-                store.dispatch('HIDE_ALERT');
-                store.dispatch('CLEAR_TOKEN');
-                delete window.localStorage.EVM_TOKEN;
-                store.dispatch('CLEAR_MONITOR_AUTH');
-                router.push('/login')
+                gotoLogin();
                 return;
             }
         }
     });
 };
 
+let gotoLogin = function() {
+    store.dispatch('HIDE_ALERT');
+    storage.clearToken();
+    store.dispatch('CLEAR_MONITOR_AUTH');
+    router.push('/login')
+};
+
 let request403 = function (data) {
     let message = data && data.error && data.error.message ? data.error.message : '身份信息验证不通过';
 
     if(message.includes('token ' + storage.tokenId() + ' not found')) {
-        request401();
+        gotoLogin();
     } else {
         store.dispatch('SHOW_ALERT', {
             message,
@@ -43,7 +42,7 @@ let request500 = function (data) {
     let message = data && data.error && data.error.message ? data.error.message : '服务器出错，请求失败';
 
     if(message.includes('token ' + storage.tokenId() + ' not found')) {
-        request401();
+        gotoLogin();
     } else {
         store.dispatch('SHOW_ALERT', {
             message,
