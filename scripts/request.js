@@ -33,15 +33,11 @@ let request403 = function (data) {
     if(message.includes('token ' + storage.tokenId() + ' not found')) {
         gotoLogin();
     } else if(message === '身份信息验证不通过') {
-        store.dispatch('SHOW_ALERT', {
-            message,
-            callbacks: {
-                onConfirm () {
-                    gotoLogin();
-                    return;
-                }
-            }
-        })
+        store.dispatch('SHOW_TIP', {
+            type: 'danger',
+            message: '身份认证已过期，请重新登录',
+        });
+        gotoLogin();
     } else {
         store.dispatch('SHOW_ALERT', {
             message,
