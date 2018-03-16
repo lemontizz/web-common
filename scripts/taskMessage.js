@@ -40,6 +40,8 @@ let trans = {
     'compute.instance.snapshot.end': ['快照', '构建完成'],
     'compute.instance.rescue.start':['虚拟机','开始进入救援模式'],
     'compute.instance.rescue.end':['虚拟机','进入救援模式完毕'],
+    'compute.instance.soft_delete.start':['虚拟机','开始进入回收站'],
+    'compute.instance.soft_delete.end':['虚拟机','进入回收站成功'],
     'volume.create.start': ['数据盘', '创建中'],
     'volume.create.end': ['数据盘', '创建完成'],
     'volume.attach.start': ['数据盘', '挂载中'],
@@ -108,7 +110,7 @@ let isSnapshotOperation = function(data) {
 }
 
 let isInstanceDelFinished = function(data) {
-    return data.event_type && data.event_type === 'compute.instance.delete.end';
+    return data.event_type && data.event_type === 'compute.instance.delete.end' || data.event_type === 'compute.instance.soft_delete.end';
 }
 
 let isRepeatMsg = function(oldMsg, newMsg) {
