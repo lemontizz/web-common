@@ -32,6 +32,16 @@ let request403 = function (data) {
 
     if(message.includes('token ' + storage.tokenId() + ' not found')) {
         gotoLogin();
+    } else if(message === '身份信息验证不通过') {
+        store.dispatch('SHOW_ALERT', {
+            message,
+            callbacks: {
+                onConfirm () {
+                    gotoLogin();
+                    return;
+                }
+            }
+        })
     } else {
         store.dispatch('SHOW_ALERT', {
             message,
