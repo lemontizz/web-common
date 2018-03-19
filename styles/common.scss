@@ -728,25 +728,6 @@ body .el-radio {
 
 /*日志*/
 .log-area{
-    .date-select{
-        height:32px;
-    }
-    .date-select-area{
-        width:31%;
-        height:32px;
-        div{
-            width:100% !important;
-            height:32px;
-        }
-        input{
-            width:100% !important;
-            height:32px;
-            letter-spacing: 0.1px;
-            color: #2c3e50;
-            border-radius:2px;
-            background:#f7f8fa;
-        }
-    }
     .server-log{
         overflow:hidden;
         margin-top:20px;
@@ -760,9 +741,6 @@ body .el-radio {
     .action-log-select{
         width:110px;
         margin-left:1%;
-        input{
-            background:#f7f8fa;
-        }
          input::-webkit-input-placeholder {
              color: #aab2bd;
              font-size: 12px;
