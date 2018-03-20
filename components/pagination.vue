@@ -157,6 +157,9 @@
         },
         watch: {
             list() {
+                if(this.limit < 10) {
+                    this.limit = this.originList.length;
+                }
                 this.build();
                 this.rebuild(this.current);
             },

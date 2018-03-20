@@ -1,21 +1,33 @@
 <template>
     <span class="checkbox-item" :class="{'checked': isChecked=== 'true', 'disabled': isDisabled === 'true', 'clickfalse': event === 'false'}" @click="checkedItem">
         <span class="checkbox"></span>
-        <span class="text">{{text}}</span>
+        <span class="text" :title="text">{{text}}</span>
     </span>
 </template>
 
 <script>
+    import $ from 'jquery';
+
     export default {
-        props: ['list', 'value', 'text', 'checked', 'disabled', 'event'],
+        props: ['list', 'value', 'text', 'checked', 'disabled', 'event','isMultiPush'],
         mounted() {
             if(this.checked === 'true') {
+                if(!this.isMultiPush){
+                    if(this.list.includes(this.value)) {
+                        return;
+                    }
+                }
                 this.list.push(this.value);
             }
         },
         watch:{
             checked(){
                 if(this.checked === 'true') {
+                    if(!this.isMultiPush){
+                        if(this.list.includes(this.value)) {
+                            return;
+                        }
+                    }
                     this.list.push(this.value);
                     this.isChecked = 'true';
                 }

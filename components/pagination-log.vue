@@ -141,7 +141,8 @@
                 pageEnd: 1,
                 showPrevEllipsis: false,
                 showNextEllipsis: false,
-                limits:[10,20,30,50,'所有'],
+                // limits:[10,20,30,50,'所有'],
+                limits:[10,20,30,50],
                 limit:10,
                 order:0,
             }
@@ -153,6 +154,10 @@
         },
         watch: {
             list() {
+                if(this.limit < 10) {
+                    this.limit = this.originList.length;
+                }
+                
                 this.build();
                 this.rebuild(1);
             },

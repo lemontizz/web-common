@@ -57,9 +57,9 @@
 </template>
 
 <script>
-    import utils from '../scripts/common/utils.js';
-    import request from '../scripts/common/request.js';
-    import config from '../scripts/common/config.js';
+    import utils from '&/scripts/utils.js';
+    import request from '&/scripts/request.js';
+    import config from '&/scripts/config.js';
 
     export default {
         props: ['uri', 'limit', 'defaultSearch', 'searchParams', 'requestConfig', 'listKey'],

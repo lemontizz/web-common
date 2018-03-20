@@ -63,7 +63,7 @@
 </style>
 
 <template>
-    <div id="page-common-alert" :show.sync="info.show" class="page-modal page-alert" style="z-index: 9999;" :class="info.show ? 'show' : 'hide'">
+    <div :show.sync="info.show" class="page-modal page-alert" style="z-index: 9999;" :class="info.show ? 'show' : 'hide'">
         <div class="modal-dialog" style="width: 500px;">
             <div class="modal-content">
                 <div slot="modal-header" class="modal-header">
@@ -72,14 +72,14 @@
                 </div>
                 <div slot="modal-body" class="modal-body">
                     <div class="alert-text">
-                        {{info.message}} 
+                        {{info.message}}
                         <a class="text-link" href="javascript:;" v-show="info.origin === 'error'" @click="showErrorInfo = !showErrorInfo">详情</a>
                     </div>
-                    <textarea v-show="showErrorInfo" cols="65" rows="10" :value="info.errorInfo"></textarea>
+                    <textarea v-show="showErrorInfo" cols="65" rows="10" :value="info.errorInfo" readonly></textarea>
                 </div>
                 <div slot="modal-footer" class="modal-footer">
                     <button type="button" class="btn btn-primary" @click="onCancel">{{info.canceltext}}</button>
-                    <button id="alert.button.ok" type="button" class="btn btn-active" @keyup.enter="onConfrim" @click="onConfrim">{{info.oktext}}</button>
+                    <button type="button" class="btn btn-active" @click="onConfrim">{{info.oktext}}</button>
                 </div>
             </div>
         </div>
@@ -98,22 +98,12 @@
         watch: {
             info() {
                 this.showErrorInfo = false;
-                if(this.info.show) {
-                    document.getElementById('alert.button.ok').focus();
-                }
-            },
+            }
         },
         data() {
             return {
                 showErrorInfo: false,
             }
-        },
-        mounted() {
-            let self = this;
-
-            $('#page-common-alert').on('keyup', function() {
-                self.onCancel();
-            });
         },
         methods: {
             onCancel: function () {
@@ -132,7 +122,7 @@
             },
             hideAlert: function () {
                 this.$store.dispatch('HIDE_ALERT');
-            }
+            },
         }
     };
 </script>
