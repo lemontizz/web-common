@@ -796,7 +796,9 @@
             width:24px;
             height:24px;
             display:inline-block;
-            background:url(#{$dir}/styles/images/baseicons.png) no-repeat -262px 0;
+            text-align: center;
+            line-height: 24px;
+            border: 1px solid #E1E5EC;
             cursor:pointer;
             margin-right: 10px;
         }
