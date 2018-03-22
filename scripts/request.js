@@ -167,14 +167,21 @@ let request = function (options) {
                 if(storage.tokenId()) {
                     opts.headers['X-Auth-Token'] = storage.tokenId();
                 } else {
-                    store.dispatch('CLEAR_TIP');
-                    store.dispatch('SHOW_TIP', {
-                        type: 'danger',
-                        message: '身份认证已过期，请重新登录',
-                    });
-                    gotoLogin();
-                    resolve({});
-                    return;
+                    if(!opts.expireStatus) {
+                        store.dispatch('CLEAR_TIP');
+                        gotoLogin();
+                        resolve({});
+                        return;
+                    }else {
+                        store.dispatch('CLEAR_TIP');
+                        store.dispatch('SHOW_TIP', {
+                            type: 'danger',
+                            message: '身份认证已过期，请重新登录',
+                        });
+                        gotoLogin();
+                        resolve({});
+                        return;
+                    }
                 }
             } else if(opts.token === false) {
                 delete opts.headers['X-Auth-Token']
