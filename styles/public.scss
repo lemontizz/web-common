@@ -117,8 +117,11 @@ input[type="checkbox"] {
         color:#45c6f8;
     }
 }
+.el-dropdown-menu {
+    max-height: 600px;
+}
 .el-dropdown-menu__item {
-    line-height: 30px;
+    line-height: 30px !important;
 }
 .el-dropdown-menu__item a, .el-dropdown-menu__item span {
     display: inline-block;
