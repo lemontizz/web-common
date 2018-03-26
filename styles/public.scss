@@ -120,6 +120,7 @@ input[type="checkbox"] {
 .el-dropdown-menu {
     max-height: 600px;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 .el-dropdown-menu__item {
     line-height: 30px !important;
