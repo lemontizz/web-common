@@ -33,17 +33,10 @@
 </template>
 
 <script>
-    import $ from 'jquery';
-
     export default {
         computed: {
             tips() {
                 return this.$store.state.common.tips;
-            }
-        },
-        watch: {
-            info() {
-                this.addTip();
             }
         },
         methods: {
