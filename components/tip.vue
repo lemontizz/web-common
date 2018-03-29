@@ -9,18 +9,18 @@
         .el-alert {
             margin-top: 10px;
         }
-    }
-    .el-alert.el-alert--info {
-        box-shadow: 0px 0px 10px -2px #909399
-    }
-    .el-alert.el-alert--success {
-        box-shadow: 0 0 10px -2px #67C23A;
-    }
-    .el-alert.el-alert--warning {
-        box-shadow: 0 0 10px -2px #E6A23C;
-    }
-    .el-alert.el-alert--error {
-        box-shadow: 0 0 10px -2px #F56C6C;
+        .el-alert.el-alert--info {
+            box-shadow: 0px 0px 10px -2px #909399
+        }
+        .el-alert.el-alert--success {
+            box-shadow: 0 0 10px -2px #67C23A;
+        }
+        .el-alert.el-alert--warning {
+            box-shadow: 0 0 10px -2px #E6A23C;
+        }
+        .el-alert.el-alert--error {
+            box-shadow: 0 0 10px -2px #F56C6C;
+        }
     }
 </style>
 
