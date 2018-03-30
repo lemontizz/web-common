@@ -61,6 +61,7 @@ let trans = {
     "snapshot.delete.end":['快照',"删除成功"],
     "image.prepare": ['镜像', '准备中'],
     "image.upload": ['镜像', '制作中'],
+    "image.delete": ['镜像', '制作失败'],
     "image.activate": ['镜像', '制作完成'],
     'floatingip.update.start': ['浮动IP', '绑定中'],
     'floatingip.update.end': ['浮动IP', '绑定完成'],
