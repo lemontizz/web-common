@@ -1,6 +1,7 @@
 import store from '@/vuex/store';
 import router from '@/router/index';
 import storage from '@/scripts/storage';
+import errorCode from '../resource/errorCode';
 
 let request401 = function (data) {
     gotoLogin();
@@ -18,6 +19,23 @@ let gotoLogin = function() {
     router.push('/login')
 };
 
+let showAlert = function(data, message, statusCode) {
+    let code = data.error && data.error.error_code ? data.error.error_code : null,
+        params = {message};
+
+    if(code && errorCode[code]) {
+        let msg = '[' code + " ] ：" + (errorCode[code].detail || errorCode[code].desc);
+        params.message = msg;
+    }
+
+    if(statusCode === 500) {
+        params.origin = 'error';
+        params.errorInfo = JSON.stringify(data)
+    }
+
+    store.dispatch('SHOW_ALERT', params)
+}
+
 let request403 = function (data) {
     let message = data && data.error && data.error.message ? data.error.message : '身份信息验证不通过';
 
@@ -31,9 +49,7 @@ let request403 = function (data) {
             message: '身份认证已过期，请重新登录',
         });
     } else {
-        store.dispatch('SHOW_ALERT', {
-            message,
-        })
+        showAlert(data, message, 403);
     }
 };
 let request500 = function (data) {
@@ -42,13 +58,8 @@ let request500 = function (data) {
     if(message.includes('token ' + storage.tokenId() + ' not found')) {
         gotoLogin();
     } else {
-        store.dispatch('SHOW_ALERT', {
-            message,
-            origin: 'error',
-            errorInfo: JSON.stringify(data)
-        });
+        showAlert(data, message, 500)
     }
-
 };
 
 let defaultOpts = {
