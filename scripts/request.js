@@ -21,10 +21,10 @@ let gotoLogin = function() {
 
 let showAlert = function(data, message, statusCode) {
     let code = data.error && data.error.error_code ? data.error.error_code : null,
-        params = {message};
+        params = {'message': message || (data.error ? data.error.message : '服务器出错，请求失败')};
 
     if(code && errorCode[code]) {
-        let msg = '[' code + " ] ：" + (errorCode[code].detail || errorCode[code].desc);
+        let msg = '[' + code + '] ：' + (errorCode[code].detail || errorCode[code].desc);
         params.message = msg;
     }
 
@@ -146,9 +146,7 @@ let request = function (options) {
                         break;
                     default:
                         if(opts.alert) {
-                            store.dispatch('SHOW_ALERT', {
-                                message: data && data.error && data.error.message ? data.error.message : '数据请求出错',
-                            });
+                            showAlert(data)
                         }
                         reject({
                             status,
